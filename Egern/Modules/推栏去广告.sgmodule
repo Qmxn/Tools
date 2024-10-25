@@ -1,0 +1,9 @@
+#!name=推栏去广告
+#!desc=过滤推栏广告
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+移除开屏广告 = type=http-response, pattern=^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping, script-path=https://kelee.one/Resource/Script/Daily/Daily_remove_ads.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% m.pvp.xoyo.com

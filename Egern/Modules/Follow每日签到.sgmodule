@@ -1,0 +1,6 @@
+#!name=Follow每日签到
+#!desc=Follow每日签到，需要进入此插件的主页链接，阅读使用说明操作。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+Follow每日签到 = type=cron, cronexp="null", script-path=https://kelee.one/Resource/Script/FollowRSS/FollowRSS_checkin.js, timeout=120, argument="[{token},{cookie}]"
