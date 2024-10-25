@@ -1,0 +1,12 @@
+#!name=360智慧生活去广告
+#!desc=移除开屏广告、首页推广横幅、商城入口及我的页面推广。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Rule]
+DOMAIN,ad.iot.360.cn,REJECT,extended-matching,pre-matching
+
+[Map Local]
+^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% app.home.360.cn
