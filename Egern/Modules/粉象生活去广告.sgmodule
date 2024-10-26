@@ -1,0 +1,12 @@
+#!name=粉象生活 去广告
+#!desc=去开屏(JQ 版)
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[General]
+force-http-engine-hosts = %APPEND% api.fenxianglife.com
+
+[MITM]
+hostname = %APPEND%, api.fenxianglife.com
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/api\.fenxianglife\.com\/njia\/index\/popup\/v2 '.data.list = []'

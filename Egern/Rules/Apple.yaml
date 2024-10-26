@@ -1558,11 +1558,11 @@ domain_suffix_set:
   - wwwapplemusic.com
   - applemusic.com
   - apple-dns.net
+  - cdn-apple.com
   - digicert.com
   - apple-cloudkit.com
   - apple-livephotoskit.com
   - apzones.com
-  - cdn-apple.com
 domain_keyword_set:
   - apple-support.akadns.net
   - apple.com.akadns.net
