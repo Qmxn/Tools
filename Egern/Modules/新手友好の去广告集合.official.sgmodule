@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% :8000
 
 [Rule]
-AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,Cainiao4iPhone*)),REJECT,pre-matching
+AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,Cainiao4iPhone*)),REJECT
 DOMAIN,acs4baichuan.m.taobao.com,REJECT,extended-matching,pre-matching
 DOMAIN,adsmind.ugdtimg.com,REJECT,extended-matching,pre-matching
 DOMAIN,amdc.m.youku.com,REJECT,extended-matching,pre-matching
@@ -113,7 +113,7 @@ DOMAIN-KEYWORD,adv.ccb.com,REJECT,extended-matching,pre-matching
 DOMAIN,dns.jd.com,REJECT,extended-matching,pre-matching
 IP-CIDR,101.124.19.122/32,REJECT,no-resolve,pre-matching
 IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve,pre-matching
-URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT
+URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 DOMAIN,credits.bz.mgtv.com,REJECT,extended-matching,pre-matching
 DOMAIN,credits2.bz.mgtv.com,REJECT,extended-matching,pre-matching
 DOMAIN,credits3.bz.mgtv.com,REJECT,extended-matching,pre-matching
@@ -165,26 +165,26 @@ DOMAIN,ads.95516.com,REJECT,extended-matching,pre-matching
 DOMAIN,switch.cup.com.cn,REJECT,extended-matching,pre-matching
 DOMAIN,yandexmetrica.com,REJECT,extended-matching,pre-matching
 AND,((URL-REGEX,^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d,extended-matching), (USER-AGENT,*com.xunmeng.pinduoduo*)),REJECT
-AND,((URL-REGEX,^http:\/\/\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))\]\/d4\?,extended-matching), (USER-AGENT,*com.xunmeng.pinduoduo*)),REJECT
-DOMAIN,titan.pinduoduo.com,REJECT,extended-matching
+AND,((URL-REGEX,^http:\/\/\[[0-9a-fA-F:]+\]/[a-zA-Z0-9]+(\?[a-zA-Z0-9=&]+),extended-matching), (USER-AGENT,*com.xunmeng.pinduoduo*)),REJECT
+DOMAIN,titan.pinduoduo.com,REJECT-NO-DROP,extended-matching,pre-matching
 DOMAIN,ta-a.pinduoduo.com,REJECT,extended-matching,pre-matching
 DOMAIN,ta.pinduoduo.com,REJECT,extended-matching,pre-matching
 DOMAIN,th-a.pinduoduo.com,REJECT,extended-matching,pre-matching
 DOMAIN,th-b.pinduoduo.com,REJECT,extended-matching,pre-matching
 DOMAIN,th.pinduoduo.com,REJECT,extended-matching,pre-matching
 URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT,extended-matching
-AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT,pre-matching
-AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,AMapiPhone*)),REJECT,pre-matching
+AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
+AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,AMapiPhone*)),REJECT
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching,pre-matching
 DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,v.smtcdns.com,REJECT,extended-matching,pre-matching
 DOMAIN,hd.xiaojukeji.com,REJECT,extended-matching,pre-matching
 DOMAIN,gwp.xiaojukeji.com,REJECT,extended-matching,pre-matching
-AND,((IP-ASN,45090,no-resolve), (DEST-PORT,25641), (PROTOCOL,TCP)),REJECT,pre-matching
-AND,((IP-ASN,63646,no-resolve), (DEST-PORT,25641), (PROTOCOL,TCP)),REJECT,pre-matching
+AND,((IP-ASN,45090,no-resolve), (DEST-PORT,25641), (PROTOCOL,TCP)),REJECT
+AND,((IP-ASN,63646,no-resolve), (DEST-PORT,25641), (PROTOCOL,TCP)),REJECT
 DOMAIN,abyss.cyapi.cn,REJECT,extended-matching,pre-matching
 DOMAIN,ad.cyapi.cn,REJECT,extended-matching,pre-matching
-AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT,pre-matching
+AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT,%E9%97%B2%E9%B1%BC*)),REJECT
 DOMAIN,hc-ssp.sm.cn,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.n.netease.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.calorietech.com,REJECT,extended-matching,pre-matching

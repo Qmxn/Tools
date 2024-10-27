@@ -1,8 +1,8 @@
 # 规则名称: AdvertisingLite.stoverride
-# 规则统计: 2042
+# 规则统计: 2044
 
 name: 复写去广告(严格版)
-desc: 最后更新时间 2024-10-26 02:17:14
+desc: 最后更新时间 2024-10-28 02:15:22
 http:
   rewrite:
     - ^http:\/\/apicloud\.zol\.com\.cn\/Article\/WapLaunchLogo - reject
@@ -972,6 +972,7 @@ http:
     - ^https?:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig - reject
     - ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen - reject
     - ^https?:\/\/sichuan\.95504\.net\/v\d\/gd\/index\/get - reject
+    - ^https?:\/\/siteapi\.zaixs\.com\/.*\/start_ad - reject
     - ^https?:\/\/smart\.789\.image\.mucang\.cn\/advert - reject
     - ^https?:\/\/smkmp\.96225\.com\/smkcenter\/ad/ - reject
     - ^https?:\/\/smsrebuild1\.mail\.10086\.cn\/together\/s - reject
@@ -1895,6 +1896,7 @@ http:
     - "shopapi.io.mi.com"
     - "shopic.sf-express.com"
     - "sichuan.95504.net"
+    - "siteapi.zaixs.com"
     - "slapi.oray.net"
     - "smarket.dian.so"
     - "smart.789.image.mucang.cn"
