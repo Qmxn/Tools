@@ -1,0 +1,10 @@
+#!name=推栏去广告
+#!desc=过滤推栏广告
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping$ 'delpaths([["data","splashConf"]])'
+http-response-jq ^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping$ 'delpaths([["data","splashConfNew"]])'
+
+[MITM]
+hostname = %APPEND% m.pvp.xoyo.com

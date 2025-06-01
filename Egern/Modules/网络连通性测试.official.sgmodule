@@ -1,0 +1,9 @@
+#!name=Connectivity_Test
+#!desc=网络连通性测试
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+Connectivity_Test = type=generic,timeout=3,script-path= https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/ConnectivityTest.js,argument=title=Connectivity Test&icon=icloud.and.arrow.down&color=#FF9F0A&server=false
+
+[Panel]
+Connectivity_Test = script-name=Connectivity_Test,update-interval=1

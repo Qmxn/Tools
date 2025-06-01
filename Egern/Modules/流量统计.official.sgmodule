@@ -1,0 +1,9 @@
+#!name=流量统计
+#!desc=Update-2023.2.20
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Panel]
+TrafficStatistics = script-name=TrafficStatistics, update-interval=1
+
+[Script]
+TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=icon=bonjour&color=#007aff

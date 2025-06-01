@@ -1,0 +1,9 @@
+#!name=京东比价
+#!desc=在京东应用内嵌入比价信息，点击商品标题即可查看。仅支持京东的标准模式，且需要应用版本不高于12.4.3。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+京东比价 = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig), script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% api.m.jd.com

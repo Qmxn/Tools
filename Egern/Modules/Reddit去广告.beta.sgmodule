@@ -1,0 +1,9 @@
+#!name=Reddit去广告
+#!desc=过滤应用内推广，阻止NSFW提示。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+移除广告 = type=http-response, pattern=^https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://kelee.one/Resource/Script/Reddit/Reddit_remove_ads.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com

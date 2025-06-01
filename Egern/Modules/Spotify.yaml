@@ -1,0 +1,57 @@
+name: Spotify
+description: Spotify
+scriptings:
+- http_response:
+    name: 跟踪响应·JSON
+    match: ^https?:\/\/api\.spotify\.com\/v1\/tracks\?
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/Spotify_response.js
+    body_required: true
+- http_request:
+    name: 歌词请求·JSON
+    match: ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/Spotify_request.js
+    body_required: true
+- http_request:
+    name: 歌词请求·Proto
+    match: ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/Spotify_request.js
+    body_required: true
+    binary_body: false
+- http_response:
+    name: 翻译歌词响应·JSON
+    match: ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=Translate
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/Translate_response.js
+    body_required: true
+- http_response:
+    name: 翻译歌词响应·Proto
+    match: ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=Translate
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/Translate_response.js
+    body_required: true
+    binary_body: false
+- http_response:
+    name: 外部歌词响应·JSON
+    match: ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=External
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/External_Lyrics_response.js
+    body_required: true
+- http_response:
+    name: 外部歌词响应·Proto
+    match: ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=External
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/External_Lyrics_response.js
+    body_required: true
+    binary_body: false
+- http_request:
+    name: JSON处理
+    match: ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/Spotify_remove_ads.js
+    timeout: 10
+- http_response:
+    name: Proto处理
+    match: ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$
+    script_url: https://github.com/Moli-X/Resources/raw/main/Loon/Spotify/Test/Spotify_proto.js
+    timeout: 10
+    body_required: true
+    binary_body: false
+mitm:
+  hostnames:
+  - api.spotify.com
+  - spclient.wg.spotify.com

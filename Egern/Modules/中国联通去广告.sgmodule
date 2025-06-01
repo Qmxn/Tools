@@ -1,0 +1,14 @@
+#!name=中国联通 去广告
+#!desc=去开屏
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[General]
+force-http-engine-hosts = %APPEND% m.client.10010.com
+
+[MITM]
+hostname = %APPEND%, m.client.10010.com
+
+[Body Rewrite]
+
+[Map Local]
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm data-type=text data='{"imgIndex":"0","adv":{"startup_adv":{"advCntList":[],"buttonList":[]}},"respCode":"0000"}' header='Content-Type:application/json'

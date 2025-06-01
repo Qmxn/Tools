@@ -1,0 +1,33 @@
+# 规则名称: Github
+# 规则统计: 30
+
+HOST-SUFFIX,atom.io,GitHub,Github
+HOST-SUFFIX,dependabot.com,GitHub,Github
+HOST-SUFFIX,ghcr.io,GitHub,Github
+HOST-SUFFIX,git.io,GitHub,Github
+HOST-SUFFIX,github-atom-io-herokuapp-com.freetls.fastly.net,GitHub,Github
+HOST-SUFFIX,github-avatars.oss-cn-hongkong.aliyuncs.com,GitHub,Github
+HOST-SUFFIX,github-cloud.s3.amazonaws.com,GitHub,Github
+HOST-SUFFIX,github.blog,GitHub,Github
+HOST-SUFFIX,github.com,GitHub,Github
+HOST-SUFFIX,github.community,GitHub,Github
+HOST-SUFFIX,github.dev,GitHub,Github
+HOST-SUFFIX,github.io,GitHub,Github
+HOST-SUFFIX,githubapp.com,GitHub,Github
+HOST-SUFFIX,githubassets.com,GitHub,Github
+HOST-SUFFIX,githubhackathon.com,GitHub,Github
+HOST-SUFFIX,githubnext.com,GitHub,Github
+HOST-SUFFIX,githubpreview.dev,GitHub,Github
+HOST-SUFFIX,githubstatus.com,GitHub,Github
+HOST-SUFFIX,githubuniverse.com,GitHub,Github
+HOST-SUFFIX,githubusercontent.com,GitHub,Github
+HOST-SUFFIX,myoctocat.com,GitHub,Github
+HOST-SUFFIX,npm.community,GitHub,Github
+HOST-SUFFIX,npmjs.com,GitHub,Github
+HOST-SUFFIX,npmjs.org,GitHub,Github
+HOST-SUFFIX,opensource.guide,GitHub,Github
+HOST-SUFFIX,rawgit.com,GitHub,Github
+HOST-SUFFIX,rawgithub.com,GitHub,Github
+HOST-SUFFIX,repo.new,GitHub,Github
+HOST-SUFFIX,thegithubshop.com,GitHub,Github
+HOST-KEYWORD,github,GitHub,Github
