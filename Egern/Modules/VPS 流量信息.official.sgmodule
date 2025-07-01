@@ -1,0 +1,9 @@
+#!name=Server Info
+#!desc=监控VPS流量信息和处理器、内存占用情况
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Panel]
+Serverinfo = script-name= Serverinfo,update-interval=3600
+
+[Script]
+Serverinfo = type=generic,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/serverinfo.js, argument = url=http://127.0.0.1:7122&name=Server Info&icon=party.popper
