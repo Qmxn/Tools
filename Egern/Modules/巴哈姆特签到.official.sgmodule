@@ -1,0 +1,6 @@
+#!name=🐻 巴哈姆特 [签到]
+#!desc=每日定时签到，包含主站签到、公会签到、动画疯答题等；模块参数可调整签到时间。\n使用前需要进入BoxJs填写账号密码，BoxJs订阅链接可查看脚本注释。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+巴哈姆特[签到] = type=cron,cronexp="{{{定时签到}}}",wake-system=1,script-update-interval=0,timeout=300,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutDailyBonus.js

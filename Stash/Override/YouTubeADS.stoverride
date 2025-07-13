@@ -1,0 +1,24 @@
+name: |-
+  Youtube去广告
+desc: |-
+  YouTube去广告规则
+icon: |-
+   https://raw.githubusercontent.com/Auniquesir/Box/X/icon/App/YouTube.png
+
+http:
+
+  mitm:
+    - "*.googlevideo.com"
+    - "youtubei.googleapis.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
+
+  script:
+    - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch)
+      name: "youtube.request_12"
+      type: request
+      require-body: true
+      max-size: -1
+      binary-mode: true

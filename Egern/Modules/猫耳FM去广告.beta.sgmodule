@@ -1,0 +1,26 @@
+#!name=猫耳FM去广告
+#!desc=移除开屏广告、横幅推广、移除青少年模式弹窗，精简首页顶部入口和发现页面。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Body Rewrite]
+http-response-jq ^https:\/\/app\.missevan\.com\/site\/launch\? 'delpaths([["info"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/site\/config$ 'delpaths([["info","homepage_top_task_button"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/site\/config$ 'delpaths([["info","teenager_popup_mode"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/site\/get-top$ 'delpaths([["info","search_words"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/site\/get-top$ 'delpaths([["info","extra_banners"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/you-might-like\/my-favors\? 'delpaths([["info","video_card"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/you-might-like\/my-favors\? '.info.ranks.data|=map(select(.name!="直播榜"))'
+http-response-jq ^https:\/\/fm\.missevan\.com\/api\/v2\/recommended\/top\? 'delpaths([["info"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/drama\/catalog-homepage\? 'delpaths([["info","extra_banners"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/catalog\/sound-homepage\? 'delpaths([["info","extra_banners"]])'
+http-response-jq ^https:\/\/fm\.missevan\.com\/api\/v\d\/chatroom\/sound\/recommend\? 'delpaths([["info"]])'
+http-response-jq ^https:\/\/app\.missevan\.com\/site\/icons\? '.info.icons |= (if . == null then null else map(select(.title != "直播" and .title != "周边商城")) end)'
+
+[Map Local]
+^https:\/\/fm\.missevan\.com\/api\/v\d\/chatroom\/open\/search-recommend-list$ data-type=text data="{}" status-code=200
+^https:\/\/app\.missevan\.com\/sound\/recommend\? data-type=text data="{}" status-code=200
+^https:\/\/app\.missevan\.com\/drama\/get-recommend-by-id\? data-type=text data="{}" status-code=200
+^https:\/\/fm\.missevan\.com\/api\/v\d\/meta\/banner$ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% app.missevan.com, fm.missevan.com

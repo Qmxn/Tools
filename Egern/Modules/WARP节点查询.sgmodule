@@ -1,0 +1,6 @@
+#!name=WARP节点查询
+#!desc=显示WARP节点的详细信息，请在所有节点页面选择一个节点长按，出现菜单后进行测试。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[MITM]
+hostname = %APPEND% api.cloudflareclient.com, zero-trust-client.cloudflareclient.com

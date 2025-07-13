@@ -1,0 +1,12 @@
+#!name=555电影去广告
+#!desc=移除开屏广告和各类横幅广告，支持iPadOS。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Body Rewrite]
+http-response-jq ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\? '(.data[] | select(.layout == "advert_self")) |= del(.data) | .data |= map(select(.layout != "advert_self")) | .data |= map(if .layout == "index_recommend_carousel" then .list |= map(select(.type != 3)) else . end)'
+
+[Map Local]
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% app-v1.ecoliving168.com

@@ -1,0 +1,6 @@
+#!name=书香门第签到
+#!desc=请配置账号密码，默认签到时间为晚上0点0分。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+书香门第每日签到 = type=cron, cronexp="null", script-path=https://raw.githubusercontent.com/bgvioletsky/ios_rule/refs/heads/main/Loon/Script/sxmd.js, timeout=120, argument="[{account},{password}]"

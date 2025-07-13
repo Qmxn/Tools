@@ -1,0 +1,9 @@
+#!name=插件仓库
+#!desc=一站式插件仓库任君选择，一键安装，方便快捷。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
+#!icon=https://github.com/Auniquesir/Box/raw/X/icon/App/Egern.png
+
+[Script]
+Loon插件仓库 = type=http-request, pattern=^https?:\/\/xn--ck8h\.com, script-path=https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js, requires-body=true, timeout=120
+
+[MITM]
+hostname = %APPEND% xn--ck8h.com

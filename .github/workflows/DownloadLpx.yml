@@ -1,0 +1,68 @@
+name: Download Lpx Files
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 19 * * *'  # 每天 19:00 UTC（北京时间 3:00）
+  push:
+    paths:
+      - 'script/download_lpx.py'
+      - '.github/workflows/download-lpx.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  download-lpx:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Cache pip packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('script/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: pip install -r script/requirements.txt
+
+    - name: Run download script
+      run: python script/download_lpx.py
+
+    - name: List downloaded files
+      run: |
+        if [ -d Loon/Plugin ]; then
+          ls -R Loon/Plugin
+        else
+          echo "⚠️ 目录不存在"
+        fi
+
+    - name: Commit and push downloaded files
+      env:
+        GITHUB_BRANCH: ${{ github.ref_name }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+        if [ -d Loon/Plugin ]; then
+          find Loon/Plugin -name '*.lpx' -exec git add {} +
+        else
+          echo "目录 Loon/Plugin 不存在，跳过添加文件"
+        fi
+
+        if git diff --cached --quiet; then
+          echo "✅ No changes to commit"
+        else
+          git commit -m "自动更新下载的 Lpx 插件文件"
+          git push origin "${GITHUB_BRANCH}"
+        fi
