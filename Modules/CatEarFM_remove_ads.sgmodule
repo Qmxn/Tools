@@ -1,0 +1,31 @@
+#!name=猫耳FM去广告
+#!desc=移除开屏广告、青少年模式弹窗、首页顶部入口，替换底栏的直播入口为发现入口。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CatEarFM.png
+#!openUrl=https://apps.apple.com/app/id1148465254
+#!tag=去广告
+#!loon_version=3.2.4(787)
+#!homepage=https://pluginhub.kelee.one
+#!date=2025-05-17 13:50:41
+
+[Map Local]
+^https:\/\/data\.missevan\.com\/site\/ad-track$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/app\.missevan\.com\/x\/recommend\/get-popup$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/fm\.missevan\.com\/api\/v2\/meta\/banner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/fm\.missevan\.com\/api\/v2\/recommended\/top\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/fm\.missevan\.com\/api\/v2\/chatroom\/sound\/recommend\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+body_rewrite_12 = type=http-response, pattern=^https:\/\/app\.missevan\.com\/site\/launch\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["info.splash","info.splash_ready"]]]
+
+body_rewrite_14 = type=http-response, pattern=^https:\/\/app\.missevan\.com\/site\/config$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["info.tab_bar_live","0","info.enable_tab_bar_live_notice","false","info.teenager_popup_mode","0"]],["json-del",["info.httpdns","info.homepage_top_task_button"]]]
+
+body_rewrite_24 = type=http-response, pattern=^https:\/\/app\.missevan\.com\/site\/get-top$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["info.search_words"]]]
+
+[MITM]
+hostname = %APPEND% app.missevan.com, data.missevan.com, fm.missevan.com
+
