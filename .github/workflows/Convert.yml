@@ -47,7 +47,7 @@ jobs:
           # REPO_API_URL: "https://api.github.com/repos/Qmua/Tools/contents/Plugin?ref=X"
 
       - name: 6. 提交并推送更改
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "更新转换的插件"
           commit_user_name: "github-actions[bot]"
