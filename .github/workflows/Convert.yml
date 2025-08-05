@@ -1,0 +1,55 @@
+name: Convert
+
+on:
+  push:
+    branches:
+      - X
+  schedule:
+    - cron: '10 19 * * *' # 增加了定时触发
+  workflow_dispatch: # 允许手动触发
+
+# 设置任务的默认权限，允许写入内容
+permissions:
+  contents: write
+
+jobs:
+  Convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. 检出你的 Tools 仓库
+        uses: actions/checkout@v4
+
+      # vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+      # 错误修复：在这里添加克隆 Script-Hub 仓库的步骤
+      - name: 2. 克隆依赖的 Script-Hub 仓库
+        uses: actions/checkout@v4
+        with:
+          repository: Script-Hub-Org/Script-Hub # 指定要克隆的仓库
+          path: Script-Hub                      # 指定克隆到哪个子目录
+      # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+      - name: 3. 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm' 
+
+      - name: 4. 安装项目依赖
+        # 确保你已经创建了 package.json 和 package-lock.json 文件
+        run: npm install
+
+      - name: 5. 执行转换脚本
+        run: node script/converter.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 如果你的脚本需要从环境变量读取仓库地址，可以在这里设置
+          # REPO_API_URL: "https://api.github.com/repos/Qmua/Tools/contents/Plugin?ref=X"
+
+      - name: 6. 提交并推送更改
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "更新转换的插件"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          file_pattern: "Modules/*.sgmodule"
