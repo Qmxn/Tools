@@ -1,0 +1,185 @@
+name: Sync Plugin
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_plugins:
+        description: '同步插件 (Sync Plugin)'
+        required: true
+        type: boolean
+        default: true
+      run_scripts:
+        description: '同步脚本 (Sync JavaScripts in Plugin)'
+        required: true
+        type: boolean
+        default: true
+
+  schedule:
+    - cron: "0 19 * * *"
+
+
+permissions:
+  actions: write
+  contents: write
+
+
+jobs:
+  BuildUpdateRepository:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TZ: 'Asia/Shanghai'
+
+    steps:
+    - name: 验证目标存储库
+      uses: actions/checkout@v4.2.2
+      with:
+        repository: Qmxn/Tools
+        path: Tools
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+
+    - name: Loon插件
+      if: ${{ github.event_name == 'schedule' || github.event.inputs.run_plugins == 'true' }}
+      run: |
+        echo "🟩 Running Plugins Sync..."
+        mkdir -p Tools/Plugin
+        mirrors=("git.botrna.site" "git.boio.me" "git.repcz.link") # 定义镜像列表
+
+        # 从仓库中的 Plugin.txt 文件读取插件链接
+        declare -A plugins
+        Plugin_FILE_PATH="Tools/Plugin.txt" # 假设 Plugin.txt 在仓库根目录
+
+        if [ ! -f "$Plugin_FILE_PATH" ]; then
+            echo "❌ ERROR: Plugin.txt not found at path: $Plugin_FILE_PATH"
+            exit 1
+        fi
+
+        echo "Reading plugin URLs from $Plugin_FILE_PATH"
+        while IFS= read -r url; do
+            if [ -n "$url" ]; then
+                # 从 URL 中提取插件名, 并统一后缀为 .lpx
+                plugin_name="$(basename "${url%.*}").lpx"
+                plugins["$plugin_name"]="$url"
+            fi
+        done < "$Plugin_FILE_PATH"
+        echo "✅ Successfully loaded $(echo ${#plugins[@]}) plugins from Plugin.txt"
+
+        # 下载逻辑
+        for plugin_name in "${!plugins[@]}"; do
+          original_url="${plugins[$plugin_name]}"
+          # 直接使用处理过的插件名，确保文件以 .lpx 结尾
+          plugin_path="Tools/Plugin/${plugin_name}"
+          download_successful=false
+
+          if [[ "$original_url" == *"kelee.one"* ]]; then
+            for mirror in "${mirrors[@]}"; do
+              download_url="${original_url/https:\/\/kelee.one/https:\/\/$mirror/kelee.one}"
+              echo "Attempting to download from $download_url"
+              curl_output=$(curl -A "Surge iOS/5151" --connect-timeout 15 -L -s -w "%{http_code}" -o "$plugin_path" "$download_url")
+              http_code="${curl_output: -3}"
+              if [ "$http_code" -eq 200 ]; then
+                if [ -s "$plugin_path" ]; then
+                  download_successful=true
+                  break
+                else
+                  echo "⚠️ Downloaded file is empty. Trying next mirror..."
+                fi
+              else
+                echo "⚠️ Download from $mirror failed with HTTP code: $http_code. Trying next mirror..."
+              fi
+            done
+          else
+            # 直接下载非 kelee.one 的链接
+            echo "Attempting to download from $original_url"
+            curl_output=$(curl -A "Surge iOS/5151" --connect-timeout 15 -L -s -w "%{http_code}" -o "$plugin_path" "$original_url")
+            http_code="${curl_output: -3}"
+            if [ "$http_code" -eq 200 ] && [ -s "$plugin_path" ]; then
+              download_successful=true
+            else
+              echo "⚠️ Download from $original_url failed with HTTP code: $http_code or file is empty."
+            fi
+          fi
+
+          if [ "$download_successful" = true ]; then
+            sed -i "1s|^|# 引用链接: $original_url\n|" "$plugin_path"
+            echo "✅ Download successful."
+          else
+            echo "❌ ERROR: Failed to download ${plugin_name} from all sources." >> ../error.log
+          fi
+        done
+
+
+    - name: Loon脚本
+      if: ${{ github.event_name == 'schedule' || github.event.inputs.run_scripts == 'true' }}
+      run: |
+        echo "🟩 Running Scripts Sync (Depends on Plugins)..."
+        mkdir -p Tools/Plugin/Script
+        cd Tools/Plugin
+        mirrors=("git.botrna.site" "git.boio.me" "git.repcz.link") # 定义镜像列表
+        declare -a downloaded_scripts=()
+
+        # 循环查找 .lpx 文件
+        for file in *.lpx; do
+          [ ! -f "$file" ] && continue
+          grep -o 'https://kelee\.one/Resource/JavaScript/[^ ]*\.js' "$file" | while read -r script_url; do
+            script_name=$(basename "$script_url")
+
+            # 检查脚本是否已下载，如果已下载则跳过
+            if [[ " ${downloaded_scripts[*]} " =~ " ${script_name} " ]]; then
+              echo "⏩ Skipping ${script_name}, already downloaded."
+              continue
+            fi
+
+            script_path="Script/$script_name"
+            download_successful=false
+            for mirror in "${mirrors[@]}"; do
+              download_url="${script_url/https:\/\/kelee.one/https:\/\/$mirror/kelee.one}"
+              echo "Attempting to download from $download_url"
+              curl_output=$(curl -A "Surge iOS/5151" --connect-timeout 15 -L -s -w "%{http_code}" -o "$script_path" "$download_url")
+              http_code="${curl_output: -3}"
+              if [ "$http_code" -eq 200 ]; then
+                if [ -s "$script_path" ]; then
+                  sed -i "1s|^|// 引用链接: $script_url\n|" "$script_path"
+                  download_successful=true
+                  downloaded_scripts+=("$script_name") # 新增：记录已成功下载的脚本
+                  echo "✅ Download successful."
+                  break
+                else
+                  echo "⚠️ Downloaded file is empty. Trying next mirror..."
+                fi
+              else
+                echo "⚠️ Download from $mirror failed with HTTP code: $http_code. Trying next mirror..."
+              fi
+            done
+            if [ "$download_successful" = false ]; then
+              echo "❌ ERROR: Failed to download ${script_name} from all mirrors." >> ../../error.log
+            fi
+          done
+        done
+
+    ###### Commit
+    - name: 添加Commits
+      run: |
+        cd Tools
+        if [[ -n $(git status -s) ]]; then
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"          
+          git add .
+          git commit -m "Tools Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"          
+          echo "尝试拉取远程更改..."
+          git pull origin HEAD --rebase      
+          echo "尝试推送更改..."
+          git push origin HEAD
+        else
+          echo "No changes to commit."
+        fi
+
+    ###### Workflow
+    - name: 清理Workflow
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        retain_days: 0
+        keep_minimum_runs: 6
+

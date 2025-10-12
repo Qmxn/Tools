@@ -1,0 +1,17 @@
+#!name=Telegram
+#!desc=Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit、iMe、Nicegram、Lingogram。
+#!author=sooyaaabo[https://github.com/sooyaaabo]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Telegram-01.png
+#!openUrl=https://apps.apple.com/app/id686449807
+#!tag=功能增强
+#!loon_version=3.3.4(898)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-09-18 12:00
+#!arguments=t.me_redirect:"Telegram"
+
+[Script]
+[Telegram]t.me重定向 = type=http-response, pattern=(https:\/\/)?t\.me\/(.+), script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Telegram/t.me_redirect.js, argument=[{{{t.me_redirect}}}]
+
+[MITM]
+hostname = %APPEND% t.me
+
