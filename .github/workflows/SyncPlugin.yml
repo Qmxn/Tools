@@ -32,7 +32,7 @@ jobs:
 
     steps:
     - name: 验证目标存储库
-      uses: actions/checkout@v4.2.2
+      uses: actions/checkout@v5.0.0
       with:
         repository: Qmxn/Tools
         path: Tools
