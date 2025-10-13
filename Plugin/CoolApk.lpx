@@ -17,7 +17,7 @@
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.snippet
 
 [Rewrite]
-# ^https:\/\/api\.coolapk\.com\/v6\/user\/profile response-body-json-jq '.data.level = 20|.data.fans =99999'
+# ^https:\/\/api\.coolapk\.com\/v6\/user\/profile response-body-json-jq '.data.level = 20|.data.fans =99999|.data.experience =94575543|.data.next_level_experience =200000000'
 
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
