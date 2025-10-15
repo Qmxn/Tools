@@ -6,10 +6,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.3.4(898)
+#!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/CNY.png
-#!date = 2025-09-18 12:00
+#!date = 2025-10-16 00:00
 
 # 2025-05-13 15:17:08
 # https://kelee.one/Tool/Loon/Lpx/Bank_remove_ads.lpx
@@ -67,7 +67,6 @@ URL-REGEX, "^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mps
 
 # 工商银行
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ reject-200
-^https?:\/\/pv\.elife\.icbc\.com\.cn\/OFSTPV\/utm\.gif reject-200
 
 # 广州农商银行
 ^https?:\/\/mbank\.grcbank\.com\/ydyh\/resources\/startpage\/.*.(jpg|png) reject-200
@@ -98,4 +97,4 @@ URL-REGEX, "^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mps
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 reject-200
 
 [MitM]
-hostname = static.95508.com, mps.95508.com, unionsr.chinalifeonline.com.cn, imcs.citicbank.com, wap.bank.ecitic.com, lban.spdb.com.cn, wap.spdb.com.cn, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, image1.ccb.com, download1.bankcomm.com, mres.aibank.com, mobile.cebbank.com, yghsh.cebbank.com, v.icbc.com.cn, pv.elife.icbc.com.cn, mbank.grcbank.com, cdn.jlbank.com.cn, mbank5.jsbchina.cn, midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, firefly.abchina.com.cn, cgbank.oss-cn-shenzhen.aliyuncs.com, images.cib.com.cn, file.cibfintech.com, static.psbc.com, mcc.psbc.com, mlife.jf365.boc.cn
+hostname = static.95508.com, mps.95508.com, unionsr.chinalifeonline.com.cn, imcs.citicbank.com, wap.bank.ecitic.com, lban.spdb.com.cn, wap.spdb.com.cn, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, image1.ccb.com, download1.bankcomm.com, mres.aibank.com, mobile.cebbank.com, v.icbc.com.cn, yghsh.cebbank.com, mbank.grcbank.com, cdn.jlbank.com.cn, mbank5.jsbchina.cn, midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, firefly.abchina.com.cn, cgbank.oss-cn-shenzhen.aliyuncs.com, images.cib.com.cn, file.cibfintech.com, static.psbc.com, mcc.psbc.com, mlife.jf365.boc.cn
