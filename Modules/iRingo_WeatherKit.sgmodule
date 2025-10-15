@@ -4,9 +4,9 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/AppleWeather.png
 #!openUrl=http://boxjs.com/#/app/iRingo.WeatherKit
 #!tag=功能增强
-#!loon_version=3.3.4(898)
+#!loon_version=3.3.5(904)
 #!homepage=https://NSRingo.github.io/guide/Weather/weather-kit
-#!date=2025-09-18 12:00
+#!date=2025-10-16 00:00
 #!arguments=DataSets:"airQuality,Weather.Provider:"WeatherKit",NextHour.Provider:"ColorfulClouds",AQI.Provider:"ColorfulClouds",AQI.ReplaceProviders:"",AQI.ComparisonProvider:"Auto",AQI.Local.ReplaceScales:"",AQI.Local.Scale:"EPA_NowCast",AQI.Local.ConvertUnits:false,API.ColorfulClouds.Token:"",API.QWeather.Host:"devapi.qweather.com",API.QWeather.Token:"",API.WAQI.Token:"",LogLevel:"WARN"
 
 [Rule]

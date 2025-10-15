@@ -4,9 +4,9 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
 #!openUrl=https://apps.apple.com/app/id1044283059
 #!tag=去广告
-#!loon_version=3.3.4(898)
+#!loon_version=3.3.5(904)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-10-03 22:00
+#!date=2025-10-16 00:00
 
 [Rule]
 AND,((URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d(\d)?"),(USER-AGENT,"*com.xunmeng.pinduoduo*")),REJECT

@@ -4,9 +4,9 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Network.png
 #!openUrl=https://net-lsp-x.com
 #!tag=功能增强
-#!loon_version=3.3.4(898)
+#!loon_version=3.3.5(904)
 #!homepage=https://t.me/zhetengsha
-#!date=2025-09-18 12:00
+#!date=2025-10-16 00:00
 
 [Rule]
 DOMAIN-SUFFIX,speedtest.cn,DIRECT

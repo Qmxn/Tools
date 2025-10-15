@@ -3,9 +3,9 @@
 #!author=FoKit[https://github.com/FoKit], Sliverkiss[https://github.com/Sliverkiss], GoodHolidays[https://github.com/GoodHolidays], ZenmoFeiShi[https://github.com/ZenmoFeiShi], NobyDa[https://github.com/NobyDa], ClydeTime[https://github.com/ClydeTime], sooyaaabo[https://github.com/sooyaaabo]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Notifyman.png
 #!tag=定时任务
-#!loon_version=3.3.4(898)
+#!loon_version=3.3.5(904)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-09-18 12:00
+#!date=2025-10-16 00:00
 #!arguments=Cookie-wechatpay:true,Task-wechatpay:true,Cron-wechatpay:"0 0 9 * * *",Cookie-alipan:true,Task-alipan:true,Cron-alipan:"0 0 9 * * *",Cookie-weibo:true,Task-weibo:true,Cron-weibo:"0 0 9 * * *",Cookie-bilibiliapp:true,Cookie-bilibiliqrcode:false,Task-bilibili:true,Cron-bilibili:"0 0 9 * * *"
 
 [Script]

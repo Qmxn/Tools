@@ -4,9 +4,9 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/XPTV.png
 #!openUrl=https://apps.apple.com/app/id6459409368
 #!tag=功能增强
-#!loon_version=3.3.4(898)
+#!loon_version=3.3.5(904)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-09-18 12:00
+#!date=2025-10-16 00:00
 
 [Header Rewrite]
 #http-request ^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php header-replace 'Content-Type' 'application/vnd.apple.mpegURL'
