@@ -5,7 +5,7 @@
 #!tag=去广告
 #!loon_version=3.3.5(904)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-10-16 00:00
+#!date=2025-10-18 20:00
 #!arguments=555dy_script:true,51xyk_script:true,51job_script:true,alibaba_script:true,blued_script:true,baidumap_script:true,baiduinput_script:true,baidutieba_script:true,boohee_script:true,bilibilimanga_script:true,caixin_script:true,donghuafeng_script:true,dianping_script:true,flightradar24_script:true,feikechaguan_script:true,umetrip_script:true,freshippo_script:true,huifutianxia_script:true,ccblife_script:true,jingxi_script:true,kuaishou_script:true,quark_script:true,adnetwork_script:true,lvtusuishenting_script:true,lawson_script:true,maidanba_script:true,maimai_script:true,mafengwo_script:true,meiyou_script:true,miguvideo_script:true,pupu_script:true,quda_script:true,reddit_script:true,qmai_script:true,renrentv_script:true,sodalife_script:true,qqnews_script:true,vgtime_script:true,youdao_script:true,winnipeg_script:true,mishop_script:true,xiaotucc_script:true,xiangjiao_script:true,xiaomang_script:true,usmile_script:true,youxi_script:true,zhaoshangzhengquan_script:true,zhangshanggongjiao_script:true,zhuanzhuan_script:true,picc_script:true,airchina_script:true
 
 [Rule]
@@ -211,7 +211,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 # 爱美剧 - api.bjxkhc.com
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ver/index_ios$ - reject
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
-# 爱阅书香 - icc.one
+# 爱阅书��� - icc.one
 ^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ - reject
 # 澳觅 - interface.aomiapp.com
 ^https?:\/\/interface\.aomiapp\.com\/aomi-ads - reject
@@ -595,7 +595,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html - reject
 # 神马 - editor.sm.cn
 ^https?:\/\/editor\.sm\.cn\/launch_picture - reject
-# 顺丰优选 - mapi.sfbest.com
+# ��丰优选 - mapi.sfbest.com
 ^https?:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.* - reject
 # 少数派 - ios.sspai.com
 ^https?:\/\/ios\.sspai\.com\/api\/v3\/recommend\/page\/get\?ad\.*ios_home_modal - reject
@@ -740,6 +740,10 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
 # 新片场 - app.xinpianchang.com
 ^https?:\/\/app\.xinpianchang\.com\/open_screen\? - reject
+# 晓晓优选 - xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad - reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad - reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner - reject
 # ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad - reject
 # ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad reject-dict
@@ -1200,7 +1204,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 华彩生活 - static.creditcard.hxb.com.cn
 ^https?:\/\/static\.creditcard\.hxb\.com\.cn\/mcube\/apps\/group\d\/M00\/00\/2[A-Z0-9]{1}\/amRG7WO.+\.jpg data-type=text data=" " status-code=200
 
-# 华尔���见闻 - api-one-wscn.awtmt.com, api.wallstreetcn.com
+# 华尔街见闻 - api-one-wscn.awtmt.com, api.wallstreetcn.com
 ^https?:\/\/api-one-wscn\.awtmt\.com\/apiv1\/advertising\/ads\/[0-9]+\/materials data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ data-type=tiny-gif status-code=200
@@ -2155,7 +2159,6 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? data-type=text data=
 
 ^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 晓晓优选 - xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
 #^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 #^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -2456,13 +2459,13 @@ body_rewrite_1481 = type=http-response, pattern=^https:\/\/app-conf\.ds\.163\.co
 
 body_rewrite_1574 = type=http-response, pattern=^https?:\/\/lcen\.xiaote\.net\/api\/graphql, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["replace-regex",[["screenSplashAd","fmz200"]]]]
 
-body_rewrite_1866 = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["replace-regex",[["userRed","fmz200"]]]]
+body_rewrite_1869 = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["replace-regex",[["userRed","fmz200"]]]]
 
-body_rewrite_1867 = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["replace-regex",[["infoData","fmz200"]]]]
+body_rewrite_1870 = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["replace-regex",[["infoData","fmz200"]]]]
 
-body_rewrite_1875 = type=http-response, pattern=^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-replace",[["data",{}]]]]
+body_rewrite_1878 = type=http-response, pattern=^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-replace",[["data",{}]]]]
 
-body_rewrite_1877 = type=http-response, pattern=^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["replace-regex",[["\"imgUrl19_5x9\":\".+?\"","\"imgUrl19_5x9\":\"\""]]]]
+body_rewrite_1880 = type=http-response, pattern=^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["replace-regex",[["\"imgUrl19_5x9\":\".+?\"","\"imgUrl19_5x9\":\"\""]]]]
 
 # 555电影 - vip7.fzwdyy.cn, *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com
 [广告拦截合集]555电影 = type=http-response, pattern="^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/movie\/index_recommend", script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/555Ad.js, requires-body=true
@@ -2618,7 +2621,7 @@ body_rewrite_1877 = type=http-response, pattern=^https?:\/\/app-izz\.zhengzhou\.
 [广告拦截合集]人人视频 = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/user\/profile, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true
 
 # 苏打校园 - api.sodalife.xyz
-[广告拦截合集]苏打���园 = type=http-response, pattern=^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js, requires-body=true
+[广告拦截合集]苏打校园 = type=http-response, pattern=^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js, requires-body=true
 
 # 腾讯新闻 - r.inews.qq.com, news.ssp.qq.com
 [广告拦截合集]腾讯新闻 = type=http-response, pattern=^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js, requires-body=true
