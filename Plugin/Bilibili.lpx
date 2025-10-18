@@ -9,7 +9,7 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-10-16 00:00
+#!date = 2025-10-17 17:00
 
 # 2025-09-27 01:20:12
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
@@ -89,10 +89,10 @@ AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD, stun), (DOMAIN-
 http-request ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.request.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]空降助手, enable={airborne}, argument=[{logLevel}]
 
 # 净化内嵌网页广告
-http-response ^https:\/\/live\.bilibili\.com\/blackboard\/era\/.+\.html\? script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.bilibili.js, requires-body = true, tag = [哔哩哔哩]净化内嵌网页广告, enable={purifyWebpage}
+http-response ^https:\/\/(live|www)\.bilibili\.com\/blackboard\/era\/.+\.html\? script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.bilibili.js, requires-body = true, tag = [哔哩哔哩]净化内嵌网页广告, enable={purifyWebpage}
 
 # ProtoBuf处理
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.response.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]ProtoBuf处理, argument=[{showUpList},{purifyTopReplies},{airborneDm},{logLevel}]
 
 [MitM]
-hostname = grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, live.bilibili.com, line3-h5-mobile-api.biligame.com
+hostname = grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, live.bilibili.com, www.bilibili.com, line3-h5-mobile-api.biligame.com

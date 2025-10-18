@@ -9,7 +9,7 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
-#!date = 2025-10-16 00:00
+#!date = 2025-10-18 21:00
 
 # 2025-10-06
 # https://gist.githubusercontent.com/ddgksf2013/12ef6aad209155e7eb62c5b00c11b9dd/raw/StartUpAds.conf
@@ -21,10 +21,13 @@ DOMAIN-SUFFIX, shenshiads.com, REJECT
 # LeXiaoTong
 DOMAIN-SUFFIX, yfanads.com, REJECT
 
+# NongYeYinHang
+DOMAIN-SUFFIX, msmp.abchina.com.cn, REJECT
+
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.10.08/c397/v2.0.621 reject-200
+^https?:\/\/2025.10.18/c398/v2.0.622 reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
@@ -669,7 +672,7 @@ DOMAIN-SUFFIX, yfanads.com, REJECT
 
 # ======= P ======= #
 # PuPuChaoShi
-^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement reject-200
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v response-body-replace-regex launch_time_close":\d+ launch_time_close":1660716799999
 
 # PikPak
 ^https:\/\/access\.mypikpak\.com\/access_controller\/v1\/area_accessible reject-200
@@ -733,6 +736,7 @@ DOMAIN-SUFFIX, yfanads.com, REJECT
 
 # QuChenShi
 ^https?:\/\/mystore-gw\.watsonsvip\.com\.cn\/gfu\/popup\/advert\/launch reject-200
+^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/\w+\/resolv reject-200
 
 # QiHangJiaoYu
 ^https?:\/\/mobile\.iqihang\.com\/api\/ark\/web\/v\d\/advert reject-200
@@ -1316,6 +1320,9 @@ http-response ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v\d\?posi
 
 # PingAnJianKangQuanQiuBan
 http-response ^https?:\/\/api\.jk\.cn\/m\.api script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pinganads.js, requires-body = false, tag = [墨鱼去开屏2.0]PingAnJianKangQuanQiuBan
+
+# PuPuChaoShi
+http-response ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v script-path = https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]PuPuChaoShi, argument="launch_time_close":\d+->launch_time_close":1660716799999"
 
 # ======= Q ======= #
 # QiDianYueDu

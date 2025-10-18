@@ -9,7 +9,7 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DiDi.png
-#!date = 2025-10-16 00:00
+#!date = 2025-10-17 16:00
 
 # 2025-09-10 09:50:58
 # https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
@@ -82,6 +82,9 @@ IP-CIDR, 162.14.157.24/32, REJECT, no-resolve
 ^https:\/\/api\.udache\.com\/gulfstream\/passenger-center\/v2\/other\/pInTripLayout response-body-json-jq '.data.order_components |= map(select(.name != "passenger_common_casper"))'
 
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? response-body-json-jq '.data |= map(if .name|IN("daijia_journey_new_tcp_switch","daijia_tcp_init","daijia_tcp_msg_encrypt","daijia_tcp_site_info","daijia_tcp_site_report")then.allow=false else. end)'
+
+# 代驾页面 - 弹窗和横幅广告
+^https:\/\/daijia\.kuaidadi\.com\/gateway\? reject-dict
 
 [MitM]
 hostname = common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, 162.14.157.*, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.*, 139.199.240.84
