@@ -1310,7 +1310,7 @@ body_rewrite_732 = type=http-response, pattern=^https:\/\/gw\.xiaocantech\.com\/
 [墨鱼去开屏2.0]IT ZhiJia = type=http-response, pattern=^https?:\/\/napi\.ithome\.com\/api\/news\/indexv\d\/iphone, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ithome.js, requires-body=true
 
 # JingXiTeJia
-[墨鱼去开屏2.0]JingXiTeJia = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/startup.js, requires-body=true
+[墨鱼���开屏2.0]JingXiTeJia = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/startup.js, requires-body=true
 
 # JingDong [Invalid]
 [墨鱼去开屏2.0]JingDong = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jd_json.js, requires-body=true

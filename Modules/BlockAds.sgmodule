@@ -211,7 +211,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 # 爱美剧 - api.bjxkhc.com
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ver/index_ios$ - reject
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
-# 爱阅书��� - icc.one
+# 爱阅书香 - icc.one
 ^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ - reject
 # 澳觅 - interface.aomiapp.com
 ^https?:\/\/interface\.aomiapp\.com\/aomi-ads - reject
@@ -595,7 +595,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html - reject
 # 神马 - editor.sm.cn
 ^https?:\/\/editor\.sm\.cn\/launch_picture - reject
-# ��丰优选 - mapi.sfbest.com
+# 顺丰优选 - mapi.sfbest.com
 ^https?:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.* - reject
 # 少数派 - ios.sspai.com
 ^https?:\/\/ios\.sspai\.com\/api\/v3\/recommend\/page\/get\?ad\.*ios_home_modal - reject
@@ -877,7 +877,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 # 爱桐乡 - mapi.txcmapp.com
 ^https?:\/\/mapi\.txcmapp\.com\/api\/open\/atx2\/ad\.php data-type=text data=" " status-code=200
 
-# 爱牵挂care - manager.aiqiangua.com
+# ���牵挂care - manager.aiqiangua.com
 ^https?:\/\/manager\.aiqiangua\.com:8080\/AqgNews\/api\/start_ad\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 安徽掌上10000 - www.ahzs10000.com
