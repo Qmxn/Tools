@@ -1,0 +1,32 @@
+#!name=粉笔
+#!desc=过滤粉笔广告
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Fenbi.png
+#!openUrl=https://apps.apple.com/app/id584660358
+#!tag=去广告
+#!loon_version=3.3.5(904)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-10-16 00:00
+
+[Map Local]
+# 开屏广告
+^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 弹窗
+^https:\/\/keapi\.fenbi\.com\/app\/iphone\/\w+\/popup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 新用户注册送好礼全屏弹窗
+^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 悬浮窗 - 笔面常备资料
+^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/entrance\/show data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 轮播图 [会有空白占位]
+#^https:\/\/tiku\.fenbi\.com\/iphone\/\w+\/banners\/v2 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 横向滚动板块
+#^https:\/\/keapi\.fenbi\.com\/app\/iphone\/\w+\/small_banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% keapi.fenbi.com, market-api.fenbi.com, tiku.fenbi.com
+

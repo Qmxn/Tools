@@ -1,0 +1,20 @@
+#!name=腾讯文档
+#!desc=过滤腾讯文档广告
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/TencentDocs.png
+#!openUrl=https://apps.apple.com/app/id1370780836
+#!tag=去广告
+#!loon_version=3.3.5(904)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-10-16 00:00
+
+[Map Local]
+# 弹窗广告
+^https:\/\/tianshu\.qq\.com\/open\/ts_access\/GetAds\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页横幅推广
+^https:\/\/h5\.qzone\.qq\.com\/p\/adboss\/api\/json\/ts_access\/GetAds$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% tianshu.qq.com, h5.qzone.qq.com
+

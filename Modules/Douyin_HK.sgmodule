@@ -1,0 +1,36 @@
+#!name=香港抖音
+#!desc=过滤香港抖音广告
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/TikTok-01.png
+#!openUrl=https://apps.apple.com/app/id1142110895
+#!tag=去广告
+#!loon_version=3.3.5(904)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-10-16 00:00
+
+[Rule]
+AND,((IP-CIDR,101.126.58.201/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,110.249.199.75/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,111.225.147.191/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,111.63.61.101/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,220.243.141.0/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((OR,((DOMAIN-SUFFIX,bytegecko.com),(DOMAIN-SUFFIX,byteeffecttos.com))),(DOMAIN-KEYWORD,ncdn)),REJECT
+
+[URL Rewrite]
+# 广告下发
+^https:\/\/api5-normal-lq\.amemv\.com\/api\/ad\/ - reject
+^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/api\/ad\/ - reject
+^https:\/\/zlink\.ugsdk\.cn\/ad\/ - reject
+
+[Script]
+body_rewrite_29 = type=http-response, pattern=^https:\/\/((aweme\.snssdk\.com|api5-normal-m\.amemv\.com)|api5-normal-m\.amemv\.com)\/aweme\/homepage\/sidebar_data\/\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data_map.recently_apps","data_map.recently_users"]]]
+
+body_rewrite_31 = type=http-response, pattern=#^https:\/\/aweme\.snssdk\.com\/service\/settings\/v3\/\?need_personal_recommend, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.key_vids_mp.tab_bar_background_use_server_time","data.key_vids_mp.dynamic_plus_icon_config","data.key_vids_mp.tabbar_config","data.key_vids_mp.homepage_two_session_tab_skin_2025","data.key_vids_mp.homepage_tab_skin_enable"]]]
+
+body_rewrite_33 = type=http-response, pattern=^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/aweme\/homepage\/render\/\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.tab_config"]]]
+
+body_rewrite_37 = type=http-response, pattern=^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/tfe\/api\/request_combine\/v1\/\?need_personal_recommend, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-replace",[["data[\"/service/settings/v3/\"].body.data.settings.homepage_two_session_tab_skin_2025",false],["data[\"/service/settings/v3/\"].body.data.settings.homepage_tab_skin_enable",false]]]]
+
+[MITM]
+hostname = %APPEND% aweme.snssdk.com, api5-normal-m.amemv.com
+

@@ -1,0 +1,28 @@
+# 引用链接: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/KDocs.lpx
+#!name = 金山文档
+#!desc = 过滤金山文档广告
+#!openUrl = https://apps.apple.com/app/id1398120225
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.5(904)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/KDocs.png
+#!date = 2025-10-16 00:00
+
+# 2025-05-13 15:17:08
+# https://kelee.one/Tool/Loon/Lpx/WPS_Documents_remove_ads.lpx
+
+[Rewrite]
+# 首页横幅广告
+^https:\/\/www\.kdocs\.cn\/kdg\/api\/v1\/cards\/type\/3\?iosVer=\d+\.\d+\.\d+&isGetList=1 reject-dict
+
+# 我的页面推广
+^https:\/\/www\.kdocs\.cn\/kdg\/api\/v1\/cards\/type\/27\?iosVer=\d+\.\d+\.\d+&isGetList=1 reject-dict
+
+# 表单收集页面推广
+^https:\/\/f-api\.kdocs\.cn\/godfather\/api\/thirdparty\/v1\/viewpager\?showLocal=mobileWebIndex reject-dict
+
+[MitM]
+hostname = www.kdocs.cn, f-api.kdocs.cn

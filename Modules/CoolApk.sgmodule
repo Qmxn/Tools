@@ -1,0 +1,17 @@
+#!name=酷安
+#!desc=过滤酷安广告
+#!author=RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/CoolApk.png
+#!openUrl=https://apps.apple.com/app/id1422581869
+#!tag=去广告
+#!loon_version=3.3.5(904)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-11-01 19:00
+
+[Map Local]
+# ^https:\/\/api\.coolapk\.com\/v6\/user\/profile response-body-json-jq '.data.level = 20 | .data.fans = 99999 | .data.experience = 94575543 | .data.next_level_experience = 200000000'
+^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.coolapk.com
+
