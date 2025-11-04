@@ -90,8 +90,8 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT
 
 [微博]移除消息页提醒 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\?, script-path=https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js, requires-body=true
 
-# 发现页 - 热门微博信息流、搜索列表、热搜提醒、猜你想搜、视频流红包
-[���博]移除热门信息流广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/search\/(?:container_timeline|finder), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true
+# 发现页 - 热门微博信息流、搜索列表、热搜���醒、猜你想搜、视频流红包
+[微博]移除热门信息流广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/search\/(?:container_timeline|finder), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true
 
 [微博]移除发现页搜索结果广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/searchall\?, script-path=https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js, requires-body=true
 
@@ -103,7 +103,7 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT
 [微博]移除开屏广告 = type=http-response, pattern=^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wbpullad\.lua), script-path=https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js, requires-body=true
 
 # 会员图标
-[微博]会员图标 = type=http-response, pattern=^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\?, script-path=https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js, requires-body=true
+[微博]会员图��� = type=http-response, pattern=^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\?, script-path=https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
