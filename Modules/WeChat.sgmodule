@@ -459,7 +459,7 @@ body_rewrite_341 = type=http-response, pattern=^https:\/\/chong\.qq\.com\/tws\/u
 # EMS中国邮政物流速递 @TEAXS //ec.ems.com.cn, ump.ems.com.cn
 [微信]移除EMS中国邮政物流速递广告 = type=http-response, pattern=^https?:\/\/ec\.ems\.com\.cn\/ecr-qry-web\/redis\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js, requires-body=true
 
-[微信]移��EMS中国邮政物流速递广告 = type=http-response, pattern=^https?:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js, requires-body=true
+[微信]移除EMS中国邮政物流速递广告 = type=http-response, pattern=^https?:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js, requires-body=true
 
 [微信]移除EMS中国邮政物流速递广告 = type=http-response, pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js, requires-body=true
 
@@ -476,7 +476,7 @@ body_rewrite_341 = type=http-response, pattern=^https:\/\/chong\.qq\.com\/tws\/u
 [微信]移除茶颜悦色广告 = type=http-response, pattern=^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body=true
 
 # COCO点单 //coco-com.e.verystar.net
-[微信]移除COCO点单广告 = type=http-response, pattern=^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js, requires-body=true
+[微信]移除COCO点���广告 = type=http-response, pattern=^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js, requires-body=true
 
 # 滴滴青桔 //htwkop.xiaojukeji.com
 [微信]移除滴滴青桔广告 = type=http-response, pattern=^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js, requires-body=true
