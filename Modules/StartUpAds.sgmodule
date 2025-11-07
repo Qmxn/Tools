@@ -1328,7 +1328,7 @@ body_rewrite_736 = type=http-response, pattern=^https:\/\/gw\.xiaocantech\.com\/
 [墨鱼去开屏2.0]JingDongLite = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, argument="pushData->ddgksf2013"
 
 # KFC KenDeJi
-[墨鱼去开���2.0]KFC KenDeJi = type=http-response, pattern=^https?:\/\/res.kfc.com.cn\/CRM\/kfcad\/apphome6\/apphome.*json, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, argument="bootStrapAd->ddgksf2013"
+[墨鱼去开屏2.0]KFC KenDeJi = type=http-response, pattern=^https?:\/\/res.kfc.com.cn\/CRM\/kfcad\/apphome6\/apphome.*json, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, argument="bootStrapAd->ddgksf2013"
 
 # KuAn
 [墨鱼去开屏2.0]KuAn = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true
