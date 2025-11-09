@@ -247,7 +247,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/api\.sfacg\.com\/ioscfg - reject
 # 比特球云盘 - pan-api.bitqiu.com
 ^https?:\/\/pan-api\.bitqiu\.com\/activity\/getPromoteGuide - reject
-# 币世界 - iapi.bishijie.com
+# ���世界 - iapi.bishijie.com
 ^https?:\/\/iapi\.bishijie\.com\/actopen\/advertising\/ - reject
 ^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome - reject
 # clicli - js-ad.ayximgs.com
@@ -908,7 +908,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 
 ^https?:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 北京银�� - cdnmobibank.bankofbeijing.com.cn
+# 北京银行 - cdnmobibank.bankofbeijing.com.cn
 ^https?:\/\/cdnmobibank\.bankofbeijing\.com\.cn\/cdn\/MarketingCloud\/.+\/.+\/99_1\/.+\.jpg data-type=text data=" " status-code=200
 
 # 掌上京彩 - cdn-xyk-app.bankofbeijing.com.cn
