@@ -1286,7 +1286,7 @@ body_rewrite_739 = type=http-response, pattern=^https:\/\/gw\.xiaocantech\.com\/
 [墨鱼去开屏2.0]123 YunPan = type=http-response, pattern=^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body=true
 
 # 369 ChuXing
-[���鱼去开屏2.0]369 ChuXing = type=http-response, pattern=^https?:\/\/api\.369cx\.cn\/v\d\/Splash\/GetSplashAd, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js, requires-body=true
+[墨鱼去开屏2.0]369 ChuXing = type=http-response, pattern=^https?:\/\/api\.369cx\.cn\/v\d\/Splash\/GetSplashAd, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js, requires-body=true
 
 # Ahhhhfs
 [墨鱼去开屏2.0]Ahhhhfs = type=http-response, pattern=^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0-9a-zA-Z_/]+\/$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ahfs.js, requires-body=true
@@ -1337,7 +1337,7 @@ body_rewrite_739 = type=http-response, pattern=^https:\/\/gw\.xiaocantech\.com\/
 # KuAn
 [墨鱼去开屏2.0]KuAn = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true
 
-[墨鱼去开屏2.0]KuAn = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true
+[墨鱼��开屏2.0]KuAn = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true
 
 # KuaKe
 [墨鱼去开屏2.0]KuaKe = type=http-response, pattern=^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js, requires-body=true
@@ -1366,7 +1366,7 @@ body_rewrite_739 = type=http-response, pattern=^https:\/\/gw\.xiaocantech\.com\/
 # Spotify
 [墨鱼去开屏2.0]Spotify-JSON = type=http-request, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10
 
-[墨鱼去开屏2.0]Spotify-Proto = type=http-response, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10
+[墨鱼去开��2.0]Spotify-Proto = type=http-response, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10
 
 # ShunFeng
 [墨鱼去开屏2.0]ShunFeng = type=http-response, pattern=^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js, requires-body=true
