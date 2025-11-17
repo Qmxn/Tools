@@ -5,7 +5,7 @@
 #!tag=去广告
 #!loon_version=3.3.5(904)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-10-16 00:00
+#!date=2025-11-17 10:00
 
 [Rule]
 # 阿里巴巴
@@ -245,35 +245,6 @@ URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
 
 ^https:\/\/www\.washpayer\.com\/(?:ad\/getBannerAd|ad\/user-adword|user\/getBannerList) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 大麦 //acs.m.taobao.com, img.alicdn.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome data-type=text data=" " status-code=200
-
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.popup\.get data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i1\/.*-tps-1080-1920.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i2\/.*-tps-1080-1920.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i3\/.*-tps-1080-1920.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i4\/.*-tps-1080-1920.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i1\/.*-tps-1125-2436.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i2\/.*-tps-1125-2436.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i3\/.*-tps-1125-2436.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i4\/.*-tps-1125-2436.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i1\/.*-tps-900-1350.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i2\/.*-tps-900-1350.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i3\/.*-tps-900-1350.jpg data-type=text data=" " status-code=200
-
-^https?:\/\/img\.alicdn\.com\/imgextra\/i4\/.*-tps-900-1350.jpg data-type=text data=" " status-code=200
-
 ^https:\/\/swdlcdn\.eastmoney\.com\/app\/adimg\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https?:\/\/fuss10\.elemecdn\.com\/.+?\.mp4 data-type=tiny-gif status-code=200
@@ -362,9 +333,9 @@ body_rewrite_229 = type=http-response, pattern=^http:\/\/ad\.5tao5ai\.com\/commo
 
 body_rewrite_231 = type=http-response, pattern=^https:\/\/www\.washpayer\.com\/common\/getReceipt, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["payload.adInfo"]]]
 
-body_rewrite_248 = type=http-response, pattern=^https:\/\/emdcadvertise(?:pj)?\.eastmoney\.com\/infoService\/v2, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-replace",[["data.adpositionidlist",[]]]]]
+body_rewrite_233 = type=http-response, pattern=^https:\/\/emdcadvertise(?:pj)?\.eastmoney\.com\/infoService\/v2, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-replace",[["data.adpositionidlist",[]]]]]
 
-body_rewrite_312 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.bottom.ad_info"]]]
+body_rewrite_297 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.bottom.ad_info"]]]
 
 # 昌原云充 五代十路 //www.washpayer.com
 [MyBlockAds]昌原云充 五代十路 = type=http-response, pattern=^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Changyuan.js, requires-body=true
