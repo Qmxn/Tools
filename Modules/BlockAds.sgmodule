@@ -387,7 +387,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ - reject
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver - reject
 ^https?:\/\/api\.wallstreetcn\.com\/apiv\d\/advertising\/ - reject
-# 虎牙直播 - cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com
+# 虎���直播 - cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com
 ^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
 ^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
 # 华住会 - appapi.huazhu.com, hweb-hotel.huazhu.com, hweb-manager.huazhu.com
@@ -907,7 +907,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 
 ^https?:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 北京银行 - cdnmobibank.bankofbeijing.com.cn
+# 北京银�� - cdnmobibank.bankofbeijing.com.cn
 ^https?:\/\/cdnmobibank\.bankofbeijing\.com\.cn\/cdn\/MarketingCloud\/.+\/.+\/99_1\/.+\.jpg data-type=text data=" " status-code=200
 
 # 掌上京彩 - cdn-xyk-app.bankofbeijing.com.cn
@@ -2491,7 +2491,7 @@ body_rewrite_1874 = type=http-response, pattern=^https?:\/\/app-izz\.zhengzhou\.
 [广告拦截合集]百度地图 = type=http-response, pattern=^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js, requires-body=true
 
 # 百度输入法 - r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com
-[广告拦截合集]百度输入法 = type=http-response, pattern=^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)), script-path=https://raw.githubusercontent.com/Keywos/rule/master/script/baidu_input/js/index.js, requires-body=true, timeout=10
+[广告拦截���集]百度输入法 = type=http-response, pattern=^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)), script-path=https://raw.githubusercontent.com/Keywos/rule/master/script/baidu_input/js/index.js, requires-body=true, timeout=10
 
 # 薄荷 - api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com
 [广告拦截合集]薄荷 = type=http-response, pattern=^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true
