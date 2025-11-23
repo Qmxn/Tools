@@ -9,9 +9,9 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-11-20 10:00
+#!date = 2025-11-23 21:00
 
-# 2025-11-20 01:32:11
+# 2025-11-23 20:50:36
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
 # 2025-11-19
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.lpx
@@ -24,6 +24,8 @@ airborne = switch, true, false, tag = [空降助手]跳过视频内插播广告,
 logLevel = select, "off", "error", "warn", "info", "debug", tag = 日志等级, desc = 选择日志输出等级
 
 [Rule]
+DOMAIN, bsbsb.top, PROXY
+
 # 阻止B站备用域名访问
 DOMAIN, api.biliapi.com, REJECT
 DOMAIN, app.biliapi.com, REJECT
