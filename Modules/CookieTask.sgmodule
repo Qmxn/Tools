@@ -22,7 +22,7 @@
 # 微博 - api.weibo.cn
 [微博]每日签到Token = type=http-request, pattern=^https?:\/\/api\.weibo\.cn\/\d\/users\/show, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js
 
-[��博]每日签到Task = type=cron, cronexp={{{Cron-weibo}}}, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js
+[微博]每日签到Task = type=cron, cronexp={{{Cron-weibo}}}, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js
 
 # Bilibili - cm.bilibili.com, m.bilibili.com
 [哔哩哔哩App]每日等级任务Token = type=http-request, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
