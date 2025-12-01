@@ -1,0 +1,19 @@
+{
+  "name": "proxy-plugin-converter",
+  "version": "1.0.0",
+  "description": "Automated script to convert proxy plugins using GitHub Actions.",
+  "main": "script/converter.js",
+  "scripts": {
+    "start": "node script/converter.js"
+  },
+  "keywords": [
+    "proxy",
+    "converter",
+    "github-actions"
+  ],
+  "author": "YourName",
+  "license": "MIT",
+  "dependencies": {
+    "follow-redirects": "^1.15.6"
+  }
+}

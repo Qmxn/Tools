@@ -1,0 +1,18 @@
+#!name=Skip Proxy and Real-IP Lists
+#!desc=跳过部分应用的代理检测
+#!author=mieqq[https://github.com/mieqq]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SkipProxy.png
+#!tag=功能增强
+#!loon_version=3.3.6(917)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-11-27 12:00
+
+[General]
+skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, id6.me
+
+always-real-ip = %APPEND% easy-login.10099.com.cn, *-update.xoyocdn.com, id6.me, open.e.189.cn
+
+[Rule]
+# 中国农业银行
+DOMAIN,msmp.abchina.com.cn,REJECT
+

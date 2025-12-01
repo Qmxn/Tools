@@ -1,0 +1,23 @@
+#!name=iTunes
+#!desc=iTunes系列解锁合集，在设置中选择需要使用的原作者脚本以使用此插件。
+#!author=chxm1023[https://github.com/chxm1023], ddgksf2013[https://github.com/ddgksf2013], Guding88[https://github.com/Guding88]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/iTunes.png
+#!tag=解锁会员
+#!loon_version=3.3.6(917)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-11-27 12:00
+#!arguments=iTunesScriptEnable-chxm1023:true,iTunesScriptEnable-Guding88:true,iTunesScriptEnable-ddgksf2013:true
+
+[Script]
+# chxm1023
+[iTunes]解锁会员系列 = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true
+
+# ddgksf2013
+[iTunes]解锁会员系列 = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body=true
+
+# Guding88
+[iTunes]解锁会员系列 = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
+

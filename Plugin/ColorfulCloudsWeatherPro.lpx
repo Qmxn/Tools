@@ -1,0 +1,37 @@
+# 引用链接: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ColorfulCloudsWeatherPro.lpx
+#!name = 彩云天气Pro
+#!desc = 过滤彩云天气广告，解锁SVIP功能。\n解锁功能需App版本低于7.20.2。
+#!openUrl = https://apps.apple.com/app/id1067198688
+#!author = RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告, 解锁会员
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.6(917)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ColorfulCloudsWeatherPro.png
+#!date = 2025-11-27 12:00
+
+# 2025-05-13 15:17:08
+# https://kelee.one/Tool/Loon/Lpx/ColorfulClouds_remove_ads.lpx
+
+[Rule]
+DOMAIN, abyss.cyapi.cn, REJECT
+DOMAIN, ad.cyapi.cn, REJECT
+DOMAIN, gather.colorfulclouds.net, REJECT
+
+[Rewrite]
+^https?:\/\/api\.caiyunapp\.com\/v1\/activity reject-dict
+^https:\/\/biz\.cyapi\.cn\/(p\/v1\/entries|p\/v1\/trial_card\/info|v2\/product) reject-dict
+^https:\/\/starplucker\.cyapi\.cn\/v3\/(config\/cypage\/\w+\/conditions|notification\/message_center|operation\/homefeatures) reject-dict
+^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? mock-response-body data-type=json data-path="https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json" status-code=200
+
+[Script]
+# 共享会员
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ColorfulCloudsWeatherPro/ColorfulCloudsWeatherPro.js, tag = [彩云天气]共享会员
+http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ColorfulCloudsWeatherPro/ColorfulCloudsWeatherPro.js, requires-body = true, tag = [彩云天气]共享会员
+
+# 底部菜单栏,活动推广
+http-response ^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ColorfulCloudsWeatherPro/ColorfulCloudsWeatherPro.js, requires-body = true, tag = [彩云天气]移除广告
+
+[MitM]
+hostname = biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com, wrapper.cyapi.cn

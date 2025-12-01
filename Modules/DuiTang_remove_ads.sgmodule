@@ -1,0 +1,25 @@
+#!name=堆糖去广告
+#!desc=移除开屏广告、信息流广告、热搜排行榜广告、我的页面横幅广告，移除关注推荐，精简底部导航栏。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DuiTang.png
+#!openUrl=https://apps.apple.com/app/id533415763
+#!tag=去广告
+#!loon_version=3.2.4(787)
+#!homepage=https://hub.kelee.one
+#!date=2025-11-20 02:07:17
+
+[Map Local]
+^https:\/\/xapi\.duitang\.com\/napi\/ads\/\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/api-2\.duitang\.com\/napi\/vienna\/daren\/daren\/recommend\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/www\.duitang\.com\/napi\/hot\/search\/list\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+body_rewrite_14 = type=http-response, pattern=^https:\/\/meta\.duitang\.com\/napi\/infra\/settings\/, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.AD_LINKS"]]]
+
+body_rewrite_18 = type=http-response, pattern=^https:\/\/api-2\.duitang\.com\/napi\/settings\/, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.SPLASH_SWING_OPEN","data.STICKER_SEARCH_HOT_KEYWORDS","data.REWARD_AD_PAG_EDITOR","data.REWARD_AD_PHOTO_EDITOR","data.REWARD_AD_CUTOUT_NUM","data.MAIN_EVENTS","data.QA_TOOLTIP_BOTTOM","data.OC_FOLLOW_OFFICIAL","data.AD_MENU_SELECTIONS","data.FEATURE_TEMPLATES","data.FEEDBACK_URL","data.AVATAR_MALL_UPDATE","data.WATERMARK_MALL_UPDATE","data.OC_MALL_UPDATE","data[\"3D_AVATAR_UPDATE\"]","data.BENEFIT_LIST","data.SHARE_BANNER"]]]
+
+[MITM]
+hostname = %APPEND% www.duitang.com, api-2.duitang.com, meta.duitang.com
+

@@ -1,0 +1,50 @@
+#!name=优酷视频
+#!desc=为好内容 全力以赴 [为好广告 全力以赴]
+#!author=RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/YoukuVideo.png
+#!openUrl=https://apps.apple.com/app/id336141475
+#!tag=去广告
+#!loon_version=3.3.6(917)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-11-27 12:00
+
+[Rule]
+# 放行地址
+DOMAIN,push.m.youku.com,DIRECT
+DOMAIN,un-acs.youku.com,DIRECT
+DOMAIN,dorangesource.alicdn.com,DIRECT
+# 拦截地址
+DOMAIN,h-adashx.ut.taobao.com,REJECT
+DOMAIN,adx-core.youku.com,REJECT
+DOMAIN,adx-open-service.youku.com,REJECT
+DOMAIN,yk-ssp.ad.youku.com,REJECT
+DOMAIN,cad.youku.com,REJECT
+DOMAIN,ykad-data.youku.com,REJECT
+DOMAIN,yk-ssp.ad.youku.com,REJECT
+DOMAIN,amdc.m.youku.com,REJECT
+DOMAIN,cad.youku.com,REJECT
+DOMAIN,nbsdk-baichuan.alicdn.com,REJECT
+DOMAIN,youku-crm-product.youku.com,REJECT
+DOMAIN,dr-danmu.youku.com,REJECT
+DOMAIN,group-ssl-danmu-ori.youku.com,REJECT
+DOMAIN,m.atm.youku.com,REJECT
+DOMAIN,mc.atm.youku.com,REJECT
+DOMAIN,vali-g1.cp31.ott.cibntv.net,REJECT
+DOMAIN,vali-ugc.cp31.ott.cibntv.net,REJECT
+DOMAIN-SUFFIX,iyes.youku.com,REJECT
+DOMAIN,adsmind.ugdtimg.com,REJECT
+DOMAIN,pre-acs.youku.com,REJECT
+DOMAIN,youku-acs.m.taobao.com,REJECT
+
+[Map Local]
+# 播放页弹窗动图
+#^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+body_rewrite_45 = type=http-response, pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.data.ad","data.data.watermark","data.data.ykad"]]]
+
+body_rewrite_46 = type=http-response, pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.tipContent","data.tipContentNew"]]]
+
+[MITM]
+hostname = %APPEND% push.m.youku.com, un-acs.youku.com
+

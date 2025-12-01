@@ -1,0 +1,34 @@
+# 引用链接: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Spotify.lpx
+#!name = Spotify
+#!desc = 过滤Spotify广告，修改插件自定义配置项需要重新登陆方可生效。
+#!openUrl = https://apps.apple.com/app/id324684580
+#!author = 001ProMax[https://github.com/001ProMax], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.6(917)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Spotify.png
+#!date = 2025-11-27 12:00
+
+# 2025-08-10
+# https://github.com/001ProMax/Surge/blob/main/Loon/Spotify.plugin
+# 2025-08-10 15:30:17
+# https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx
+
+[Argument]
+tab = switch, false, true, tag = 移除底栏创建按钮, desc = 此开关控制是否移除底栏创建按钮
+useractivity = switch, true, false, tag = 启用Apple设备接力, desc = 此开关控制是否使用Apple设备接力
+
+[Rewrite]
+# 播放广告
+^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
+
+# 恢复歌手和专辑列表的正常展示
+^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad
+
+[Script]
+http-response ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service) script-path = https://raw.githubusercontent.com/001ProMax/Surge/main/Script/Spotify.Crack.Dev.js, requires-body = true, binary-body-mode = true, timeout = 5, tag = [Spotify]Protobuf, argument = [{tab},{useractivity}]
+
+[MitM]
+hostname = *-spclient.spotify.com, spclient.wg.spotify.com

@@ -1,0 +1,44 @@
+#!name=微博轻享版
+#!desc=过滤微博轻享版广告
+#!author=Keywos[https://github.com/Keywos], kokoryh[https://github.com/kokoryh], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo_intl.png
+#!openUrl=https://apps.apple.com/app/id1215210046
+#!tag=去广告
+#!loon_version=3.3.6(917)
+#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!date=2025-11-27 12:00
+
+[Map Local]
+# 热门视频、热推荐、私信中绿洲的擦边诱导推广
+^https?:\/\/api\.weibo\.c(n|om)\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=(hot_search_users|treehole&auth=) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 广告投放配置
+^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 发现页面 - 趋势 - 热门视频信息流
+^https:\/\/api\.weibo\.cn\/2\/cardlist\?v_f=2 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 时间线 - 关注 - 广告
+^https:\/\/api\.weibo\.cn\/2\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 搜索 - 填充词
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# ---------- kokoryh ---------- #
+#^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info& data-type=text data="{"retcode":0,"info":"","data":{"expiration_time":"86400","cards":[{"tip":"搜索微博","word":""}]}}" header="Content-Type:text/html"
+
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info& mock-response-body data-type=html data="{"retcode":0,"info":"","data":{"expiration_time":"86400","cards":[{"tip":"搜索微博","word":""}]}}"
+#^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?ct=feed&a=search_topic& data-type=text data="{"retcode":0,"info":"","data":[],"ext":{}}" header="Content-Type:text/html"
+
+[Script]
+body_rewrite_24 = type=http-response, pattern=^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.banner","data.discover","data.user_footprint","data.profile_accessrecord","data.native_content","data.topics"]]]
+
+body_rewrite_31 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/friends\/timeline$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["advertises","ad","ad_version_2_weibo"]]]
+
+body_rewrite_34 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["ad","ad_version_2_weibo"]]]
+
+[MITM]
+hostname = %APPEND% bootpreload.uve.weibo.com, weibointl.api.weibo.cn, api.weibo.cn
+
