@@ -166,7 +166,7 @@ DOMAIN,et.ykccn.com,REJECT
 # 快狗打车搬家 //suyun-user.daojia.com
 ^https:\/\/suyun-guest\.daojia\.com\/api\/kuaigou\/banjia\/review data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 易捷加油、石化易电 - 红包弹窗 @张军
+# 易捷加油、石���易电 - 红包弹窗 @张军
 ^https:\/\/ne\.gdsz\.sinopec\.com\/gateway\/api\/omp\/mt\/appAdvertising data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 货拉拉 //qapi.huolala.cn, appuser-static.huolala.cn
@@ -194,7 +194,7 @@ DOMAIN,et.ykccn.com,REJECT
 # 达达快送 //supplier-api.imdada.cn
 ^https:\/\/supplier-api\.imdada\.cn\/fe\/public\/ad\/spot\?forwardServiceName=growth-activity data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 来电 //mobile-api.imlaidian.com
+# ��电 //mobile-api.imlaidian.com
 ^https:\/\/mobile-api\.imlaidian\.com\/api\/args data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 搜电充电 //wxs-weixin.sd.zhumanggroup.com
@@ -476,7 +476,7 @@ body_rewrite_341 = type=http-response, pattern=^https:\/\/chong\.qq\.com\/tws\/u
 [微信]移除茶颜悦色广告 = type=http-response, pattern=^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body=true
 
 # COCO点单 //coco-com.e.verystar.net
-[微信]移除COCO��单广告 = type=http-response, pattern=^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js, requires-body=true
+[微信]移除COCO点单广告 = type=http-response, pattern=^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js, requires-body=true
 
 # 滴滴青桔 //htwkop.xiaojukeji.com
 [微信]移除滴滴青桔广告 = type=http-response, pattern=^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig, script-path=https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js, requires-body=true

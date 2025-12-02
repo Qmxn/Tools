@@ -93,7 +93,7 @@ body_rewrite_41 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search
 
 [知乎]移除热榜信息流推广 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\?, script-path=https://kelee.one/Resource/JavaScript/Zhihu/Zhihu_remove_ads.js, requires-body=true
 
-# 回答详���页 - 评论区顶部、下一个回答
+# 回答详情页 - 评论区顶部、��一个回答
 [知乎]移除下一个回答推广、评论区顶部推广 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render), script-path=https://kelee.one/Resource/JavaScript/Zhihu/Zhihu_remove_ads.js, requires-body=true
 
 # http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) script-path = https://kelee.one/Resource/JavaScript/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = [知乎]移除回答详情页推广
