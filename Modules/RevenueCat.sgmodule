@@ -5,7 +5,7 @@
 #!tag=解锁会员
 #!loon_version=3.3.6(917)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-11-27 12:00
+#!date=2025-12-03 19:00
 #!arguments=RevenueCatScriptEnable-chxm1023:true,RevenueCatScriptEnable-Guding88:true,RevenueCatScriptEnable-ddgksf2013:true,RevenueCatScriptEnable-Yu9191:true
 
 [URL Rewrite]
@@ -20,10 +20,10 @@
 # Guding88
 [RevenueCat]会员解锁@Guding88 = type=http-response, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body=true
 
-[RevenueCat]会员解锁@Guding88 = type=http-request, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
+[RevenueCat]���员解锁@Guding88 = type=http-request, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
 
 # ddgksf2013
-[RevenueCat]会员解锁@ddgksf2013 = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body=true
+[RevenueCat]会员解锁@ddgksf2013 = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://ddgksf2013.top/scripts/revenuecat.vip.js, requires-body=true
 
 [RevenueCat]会员解锁@ddgksf2013 = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
 

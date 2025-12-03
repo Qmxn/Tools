@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.3.6(917)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-12-01 17:00
+#!date=2025-12-03 14:00
 
 [Map Local]
 ^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/position_resource\/get_banners\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -34,7 +34,7 @@
 
 ^https:\/\/keapi\.fenbi\.com\/ai\/(?:iphone|ipad)\/exercise_remark\/get_questions_remark\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/keapi\.fenbi\.com\/(?:iphone|ipad)\/position_resource\/get_tiku_banners\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/position_resource\/get_tiku_banners\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 #^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/position_resource\/get_home_banners\?.*position_resource_type=1 data-type=text data="{"code":1,"msg":"","data":{"positionResourceType":1,"payload":{"items":[{"id":17868,"courseSetId":2,"content":"妹子图","imageUrl":"https://i.im.ge/2025/11/24/4DrVp0.mm.png","url":"null","redirectType":1,"ordinal":8,"createdTime":1746799144383,"startTime":1759850171000,"endTime":4070880000000,"type":0,"bizType":4}],"count":1}" status-code=200 header="Content-Type:application/json"
 

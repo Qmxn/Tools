@@ -306,7 +306,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/e\.dangdang\.com\/.+?getDeviceStartPage - reject
 ^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init - reject
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init - reject
-# 东方财富 - emdcadvertise.eastmoney.com
+# 东方���富 - emdcadvertise.eastmoney.com
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d - reject
 # 懂球帝 - ap.dongdianqiu.com
 #^https?:\/\/ap\.dongqiudi\.com\/plat\/v - reject
