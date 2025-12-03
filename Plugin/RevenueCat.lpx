@@ -9,12 +9,12 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RevenueCat.png
-#!date = 2025-11-27 12:00
+#!date = 2025-12-03 19:00
 
 # 2025-10-17
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
 # 2024-07-08
-# https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
+# https://ddgksf2013.top/scripts/revenuecat.vip.js
 # 2025-01-10
 # https://github.com/Guding88/Script/blob/main/APPheji_Guding.plugin
 # 2025-02-27
@@ -39,7 +39,7 @@ http-response ^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^
 http-request ^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body = false, tag = [RevenueCat]会员解锁@Guding88, enable={RevenueCatScriptEnable-Guding88}
 
 # ddgksf2013
-http-response ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body = true, tag = [RevenueCat]会员解锁@ddgksf2013, enable={RevenueCatScriptEnable-ddgksf2013}
+http-response ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://ddgksf2013.top/scripts/revenuecat.vip.js, requires-body = true, tag = [RevenueCat]会员解锁@ddgksf2013, enable={RevenueCatScriptEnable-ddgksf2013}
 http-request ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js, requires-body = false, tag = [RevenueCat]会员解锁@ddgksf2013, enable={RevenueCatScriptEnable-ddgksf2013}
 
 # Yu9191

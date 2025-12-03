@@ -9,7 +9,7 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Fenbi.png
-#!date = 2025-12-01 17:00
+#!date = 2025-12-03 14:00
 
 # 2025-11-27 20:44:18
 # https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx
@@ -44,7 +44,7 @@
 
 ^https:\/\/keapi\.fenbi\.com\/ai\/(?:iphone|ipad)\/exercise_remark\/get_questions_remark\? reject-dict
 
-^https:\/\/keapi\.fenbi\.com\/(?:iphone|ipad)\/position_resource\/get_tiku_banners\? reject-dict
+^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/position_resource\/get_tiku_banners\? reject-dict
 
 ^https:\/\/keapi\.fenbi\.com\/ai\/(?:iphone|ipad)\/entry\? mock-response-body data-type=json data="{"msg":"","data":null,"code":404}"
 
