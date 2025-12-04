@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.3.6(917)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-11-27 12:00
+#!date=2025-12-04 21:00
 
 [Rule]
 DOMAIN-SUFFIX,iyes.youku.com,REJECT

@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.3.6(917)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-11-27 12:00
+#!date=2025-12-04 12:00
 
 [Rule]
 AND,((URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d(\d)?"),(USER-AGENT,"*com.xunmeng.pinduoduo*")),REJECT
@@ -14,34 +14,18 @@ AND,((URL-REGEX,"^http:\/\/\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-
 AND,((DOMAIN,api.pinduoduo.com),(PROTOCOL,QUIC)),REJECT
 DOMAIN,sdk.1rtb.net,REJECT
 DOMAIN,titan.pinduoduo.com,REJECT
-IP-CIDR,114.110.98.3/32,REJECT
-IP-CIDR,114.110.98.2/32,REJECT
-IP-CIDR,36.152.46.3/32,REJECT
-IP-CIDR,114.110.96.6/32,REJECT
-IP-CIDR,36.152.46.13/32,REJECT
 IP-CIDR,121.5.84.85/32,REJECT
 IP-CIDR,183.194.214.21/32,REJECT
 IP-CIDR,49.235.102.190/32,REJECT
 IP-CIDR,81.69.116.33/32,REJECT
 IP-CIDR,183.194.214.20/32,REJECT
 IP-CIDR,117.185.244.145/32,REJECT
-IP-CIDR,101.35.204.35/32,REJECT
-IP-CIDR,114.110.97.97/32,REJECT
-IP-CIDR,81.69.104.17/32,REJECT
-IP-CIDR,117.185.242.187/32,REJECT
-IP-CIDR,117.185.242.18/32,REJECT
 IP-CIDR,183.194.214.14/32,REJECT
-IP-CIDR,114.110.96.1/32,REJECT
-IP-CIDR,36.152.46.15/32,REJECT
-IP-CIDR,114.110.97.30/32,REJECT
-IP-CIDR,81.69.130.131/32,REJECT
-IP-CIDR,114.110.96.26/32,REJECT
-IP-CIDR,101.35.212.35/32,REJECT
 
 [Map Local]
 ^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 订单页顶部优惠券横幅推广及倒计时
+# 订���页顶部优惠券横幅推广及倒计时
 ^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 红包优惠弹窗
@@ -70,7 +54,7 @@ IP-CIDR,101.35.212.35/32,REJECT
 
 ^https:\/\/api\.pinduoduo\.com\/api\/dunkirk\/liveactivity\/push\/create\/url\/report\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 首页底部优惠券推荐横条
+# 首页底部优惠券推荐���条
 ^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/api\.pinduoduo\.com\/api\/engels\/wait\/receive\/review\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -86,17 +70,17 @@ IP-CIDR,101.35.212.35/32,REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-body_rewrite_77 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["result.icon_set","result.search_bar_hot_query","result.dy_module.irregular_banner_dy"]]]
+body_rewrite_61 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["result.icon_set","result.search_bar_hot_query","result.dy_module.irregular_banner_dy"]]]
 
-body_rewrite_78 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/search\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["expansion"]]]
+body_rewrite_62 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/search\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["expansion"]]]
 
-body_rewrite_82 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["monthly_card_entrance","personal_center_style_v2_vo","icon_set.icons","icon_set.top_personal_icons","title_bar_items","personal_banner"]]]
+body_rewrite_66 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["monthly_card_entrance","personal_center_style_v2_vo","icon_set.icons","icon_set.top_personal_icons","title_bar_items","personal_banner"]]]
 
-body_rewrite_83 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["bottom_section_list","ui.bottom_section","ui.live_section.float_info"]]]
+body_rewrite_67 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["bottom_section_list","ui.bottom_section","ui.live_section.float_info"]]]
 
-body_rewrite_84 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_detail_group\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["goods_list"]]]
+body_rewrite_68 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_detail_group\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["goods_list"]]]
 
-body_rewrite_86 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/order\/\d+-\d+\/shipping, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["shipping.banner_above_recommend"]]]
+body_rewrite_70 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/order\/\d+-\d+\/shipping, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["shipping.banner_above_recommend"]]]
 
 [MITM]
 hostname = %APPEND% api.pinduoduo.com, api.yangkeduo.com
