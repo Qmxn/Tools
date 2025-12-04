@@ -9,10 +9,11 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Amap.png
-#!date = 2025-11-27 12:00
+#!date = 2025-12-04 21:00
 
 # 2025-09-04 23:46:49
 # https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx 
+# 2025-12-04
 # https://klraw.pages.dev/kelv1n1n/script/main/plugin/amap.plugin?token=209863
 
 [Rule]
@@ -46,7 +47,7 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
-^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? reject-dict
+# ^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? reject-dict
 
 # 打车页 - 红点角标、弹窗、天气图标、推广卡片
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) reject-dict
