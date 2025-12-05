@@ -9,13 +9,13 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo.png
-#!date = 2025-11-27 12:00
+#!date = 2025-12-05 10:00
 
-# 2025-08-24 19:27:15
+# 2025-12-05 04:15:52
 # https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx
 # 2025-11-10 10:08:47
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/weibo.plugin
-# 2025-02-10
+# 2025-10-30
 # https://raw.githubusercontent.com/neishe321/My_Scripts/main/Surge/Module/weibo.sgmodule
 
 [Rule]
@@ -47,7 +47,7 @@ DOMAIN-SUFFIX, biz.weibo.com, REJECT
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? reject-dict
-^https:\/\/api\.weibo\.cn\/!\/(?:sug\/list\/finderchange|was\/finder\/searchbarchange)\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/(?:search\/finder_nav_polling|sug\/list\/finderchange|was\/finder\/searchbarchange)\? reject-dict
 
 # 视频页
 ^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\? reject-dict

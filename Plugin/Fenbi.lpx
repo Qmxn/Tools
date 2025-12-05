@@ -15,6 +15,7 @@
 # https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx
 
 [Rewrite]
+# 开屏广告、弹窗广告、悬浮广告、热门搜索、底栏皮肤、我的页面、AI
 ^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/position_resource\/get_banners\? reject-dict
 
 ^https:\/\/market-api\.fenbi\.com\/(?:iphone|ipad)\/v1\/assistant\/info\? reject-dict
