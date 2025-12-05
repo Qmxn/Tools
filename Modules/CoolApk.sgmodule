@@ -9,7 +9,6 @@
 #!date=2025-11-27 12:00
 
 [Map Local]
-# ^https:\/\/api\.coolapk\.com\/v6\/user\/profile response-body-json-jq '.data.level = 20 | .data.fans = 99999 | .data.experience = 94575543 | .data.next_level_experience = 200000000'
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
