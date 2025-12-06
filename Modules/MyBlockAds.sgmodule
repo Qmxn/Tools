@@ -359,7 +359,7 @@ body_rewrite_291 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/o
 [MyBlockAds]美团小程序 = type=http-response, pattern=^https:\/\/web\.meituan\.com\/api\/miniprogram\/index\/aggregate, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/MeiTuanNoAd.js, requires-body=true
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
-[MyBlockAds]小米商城 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/MyBlockAds.js, requires-body=true
+[MyBlockAds]小米���城 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/MyBlockAds.js, requires-body=true
 
 # 中国农业银行 //mobilepaas.abchina.com.cn
 [MyBlockAds]中国农业银行 = type=http-request, pattern=^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/header.js
