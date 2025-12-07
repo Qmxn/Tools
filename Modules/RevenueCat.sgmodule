@@ -20,7 +20,7 @@
 # Guding88
 [RevenueCat]会员解锁@Guding88 = type=http-response, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body=true
 
-[RevenueCat]会员解锁@Guding88 = type=http-request, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
+[RevenueCat]���员解锁@Guding88 = type=http-request, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
 
 # ddgksf2013
 [RevenueCat]会员解锁@ddgksf2013 = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://ddgksf2013.top/scripts/revenuecat.vip.js, requires-body=true
