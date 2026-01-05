@@ -11,7 +11,7 @@
 #!arguments=Type:"Official",AutoCC:true,ShowOnly:true,Position:"Forward"
 
 [Script]
-JSON·YouTube播放���请求 = type=http-request, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*), script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js, requires-body=true, argument="[{{{Type}}},{{{AutoCC}}},{{{ShowOnly}}},{{{Position}}}]"
+JSON·YouTube播放器请求 = type=http-request, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*), script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js, requires-body=true, argument="[{{{Type}}},{{{AutoCC}}},{{{ShowOnly}}},{{{Position}}}]"
 
 JSON·YouTube播放器响应 = type=http-response, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*), script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_response.js, requires-body=true, argument="[{{{Type}}},{{{AutoCC}}},{{{ShowOnly}}},{{{Position}}}]"
 
@@ -29,7 +29,7 @@ YouTube翻译定时文本响应 = type=http-response, pattern=^https?:\/\/(www|m
 
 JSON·YouTube Music浏览请求 = type=http-request, pattern=^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*), script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js, requires-body=true, argument="[{{{Type}}},{{{AutoCC}}},{{{ShowOnly}}},{{{Position}}}]"
 
-Proto·YouTube Music浏览请�� = type=http-request, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*), script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js, requires-body=true, binary-body-mode=true, argument="[{{{Type}}},{{{AutoCC}}},{{{ShowOnly}}},{{{Position}}}]"
+Proto·YouTube Music浏���请求 = type=http-request, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*), script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js, requires-body=true, binary-body-mode=true, argument="[{{{Type}}},{{{AutoCC}}},{{{ShowOnly}}},{{{Position}}}]"
 
 JSON·YouTube Music翻译歌词响应 = type=http-response, pattern=^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate, script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_Translate_response.js, requires-body=true
 
