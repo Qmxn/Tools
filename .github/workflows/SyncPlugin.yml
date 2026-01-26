@@ -24,7 +24,7 @@ jobs:
       
     steps:
     - name: 验证目标存储库
-      uses: actions/checkout@v6.0.1
+      uses: actions/checkout@v6.0.2
       with:
         repository: Qmxn/Tools
         path: Tools

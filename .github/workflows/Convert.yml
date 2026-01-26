@@ -18,12 +18,12 @@ jobs:
 
     steps:
       - name: 1. 检出你的 Tools 仓库
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       # vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
       # 错误修复：在这里添加克隆 Script-Hub 仓库的步骤
       - name: 2. 克隆依赖的 Script-Hub 仓库
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
         with:
           repository: Script-Hub-Org/Script-Hub # 指定要克隆的仓库
           path: Script-Hub                      # 指定克隆到哪个子目录
