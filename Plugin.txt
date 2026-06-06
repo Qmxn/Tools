@@ -70,6 +70,7 @@ https://kelee.one/Tool/Loon/Lpx/BooHee_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/CaixinMedia_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ColorfulClouds_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/Cece_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ChengFenMiao_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Chuzhan_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/XFuse_remove_ads.lpx
@@ -140,6 +141,7 @@ https://kelee.one/Tool/Loon/Lpx/MoeGirlWiki_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/miHoYoBBS_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/MojiWeather_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/MaiMai_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/CSG_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/PangguaiLife_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/DubbingShow_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx
