@@ -1,0 +1,129 @@
+name: Sync Plugin
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_plugins:
+        description: '同步插件 (Sync Plugin)'
+        required: true
+        type: boolean
+        default: true
+  schedule:
+    - cron: "0 19 * * *"
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  SyncPlugin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TZ: 'Asia/Shanghai'
+      
+    steps:
+    - name: 检出目标仓库
+      uses: actions/checkout@v7
+      with:
+        repository: Qmxn/Tools
+        path: Tools
+        # token: ${{ secrets.PAT_TOKEN }}   # 注释掉，改用默认 GITHUB_TOKEN
+        # 仅当目标仓库为公开时有效，若为私有则仍会失败。
+        
+    - name: Loon 插件同步
+      if: ${{ github.event_name == 'schedule' || github.event.inputs.run_plugins == 'true' }}
+      run: |
+        echo "🟩 开始同步插件..."
+        mkdir -p Tools/Plugin
+        mirrors=("git.botrna.site" "git.boio.me" "git.repcz.link")
+
+        declare -A plugins
+        Plugin_FILE_PATH="Tools/Plugin.txt"
+
+        if [ ! -f "$Plugin_FILE_PATH" ]; then
+            echo "❌ ERROR: Plugin.txt 不存在于 $Plugin_FILE_PATH"
+            exit 1
+        fi
+
+        echo "从 $Plugin_FILE_PATH 读取插件列表"
+        while IFS= read -r url; do
+            if [ -n "$url" ]; then
+                plugin_name="$(basename "${url%.*}").lpx"
+                plugins["$plugin_name"]="$url"
+            fi
+        done < "$Plugin_FILE_PATH"
+        echo "✅ 加载了 ${#plugins[@]} 个插件"
+
+        for plugin_name in "${!plugins[@]}"; do
+          original_url="${plugins[$plugin_name]}"
+          plugin_path="Tools/Plugin/${plugin_name}"
+          download_successful=false
+
+          if [[ "$original_url" == *"kelee.one"* ]]; then
+            for mirror in "${mirrors[@]}"; do
+              download_url="${original_url/https:\/\/kelee.one/https:\/\/$mirror/kelee.one}"
+              echo "尝试从 $download_url 下载"
+              curl_output=$(curl -A "Surge iOS/5151" --connect-timeout 15 -L -s -w "%{http_code}" -o "$plugin_path" "$download_url")
+              http_code="${curl_output: -3}"
+              if [ "$http_code" -eq 200 ] && [ -s "$plugin_path" ]; then
+                download_successful=true
+                break
+              else
+                echo "⚠️ 镜像 $mirror 失败 (HTTP $http_code)"
+              fi
+            done
+          else
+            echo "尝试从 $original_url 下载"
+            curl_output=$(curl -A "Surge iOS/5151" --connect-timeout 15 -L -s -w "%{http_code}" -o "$plugin_path" "$original_url")
+            http_code="${curl_output: -3}"
+            if [ "$http_code" -eq 200 ] && [ -s "$plugin_path" ]; then
+              download_successful=true
+            else
+              echo "⚠️ 下载失败 (HTTP $http_code)"
+            fi
+          fi
+
+          if [ "$download_successful" = true ]; then
+            # 若文件首行为 #!，则插入到第二行，否则插入到第一行
+            if [ -s "$plugin_path" ]; then
+              first_line=$(head -n 1 "$plugin_path")
+              if [[ "$first_line" == "#!"* ]]; then
+                sed -i "1a # 引用链接: $original_url" "$plugin_path"
+              else
+                sed -i "1s|^|# 引用链接: $original_url\n|" "$plugin_path"
+              fi
+              echo "✅ 下载成功，已添加来源注释"
+            else
+              echo "❌ 文件为空"
+            fi
+          else
+            echo "❌ 错误：从所有源下载 $plugin_name 均失败" | tee -a /tmp/error.log
+          fi
+        done
+
+        if [ -f /tmp/error.log ]; then
+          echo "--- 下载错误汇总 ---"
+          cat /tmp/error.log
+        fi
+
+    - name: 提交并推送更改
+      run: |
+        cd Tools
+        if [[ -n $(git status -s) ]]; then
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "更新插件 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+          git pull origin HEAD --rebase
+          git push origin HEAD
+        else
+          echo "无变更需要提交"
+        fi
+
+    - name: 清理旧 workflow runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        retain_days: 0
+        keep_minimum_runs: 2

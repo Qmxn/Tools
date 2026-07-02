@@ -1,0 +1,46 @@
+#!name=凤凰新闻去广告
+#!desc=移除皮肤、开屏广告、信息流广告、文末广告、视频流广告、评论区广告，移除信息流订阅号文章、文末推荐阅读，精简我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ifengNews.png
+#!openUrl=https://apps.apple.com/app/id395133418
+#!tag=去广告
+#!loon_version=3.4.0(962)
+#!homepage=https://hub.kelee.one
+#!date=2026-07-01 11:32:25
+
+[URL Rewrite]
+^https:\/\/config\.nine\.ifeng\.com\/news\/h5prepublish\? - reject
+
+[Map Local]
+^https:\/\/nine\.ifeng\.com\/adPreload\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/startUpAdPrestrainList\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/startUpAddAd\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/searchhotwordsrollv\d\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/searchvideohotwordsroll\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/searchHotwordsReact\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/user\.iclient\.ifeng\.com\/active_task\/channel\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/newRelatedDocs\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/getdocbackinfo\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/user\.iclient\.ifeng\.com\/event_protal\/list_lite\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/nine\.ifeng\.com\/adVideoImmersionWindow\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+body_rewrite_17 = type=http-response, pattern=^https:\/\/config\.nine\.ifeng\.com\/news\/cow\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["zip_url"]]]
+
+body_rewrite_24 = type=http-response, pattern=^https:\/\/config\.nine\.ifeng\.com\/news\/channel\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["more","youngChannel"]]]
+
+body_rewrite_26 = type=http-response, pattern=^https:\/\/nine\.ifeng\.com\/getNewsDocs\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["body.showAdvert","body.adData"]]]
+
+[MITM]
+hostname = %APPEND% nine.ifeng.com, config.nine.ifeng.com, user.iclient.ifeng.com, comment.ifeng.com
+
