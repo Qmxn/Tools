@@ -77,6 +77,7 @@ https://kelee.one/Tool/Loon/Lpx/CaixinMedia_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ColorfulClouds_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Cece_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/MyFriday_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/Chelaile_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ChengFenMiao_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/SkyworthDigitalPicamera_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Chuzhan_remove_ads.lpx
