@@ -39,7 +39,7 @@ jobs:
           # token: ${{ secrets.PAT_TOKEN }}   # 注释掉，改用默认 GITHUB_TOKEN
 
       - name: 4. 设置 Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '20'
           cache: 'npm'
