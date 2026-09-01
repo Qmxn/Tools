@@ -1,0 +1,37 @@
+#!name=直播吧去广告
+#!desc=移除信息流广告、横幅广告、弹窗广告、皮肤配置、悬浮挂件、热门搜索，移除青少年模式，精简我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhibo8.png
+#!openUrl=https://apps.apple.com/app/id1228058501
+#!tag=去广告
+#!loon_version=3.4.0(962)
+#!homepage=https://hub.kelee.one
+#!date=2026-07-03 08:23:50
+
+[Map Local]
+^https:\/\/rn\.qiumibao\.com\/news\/relation\.php$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/guess\.qiumibao\.com\/api\/c\/notice$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/guess\.qiumibao\.com\/api\/c\/pop$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/guess\.qiumibao\.com\/api\/ep\/pop$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/guess\.qiumibao\.com\/api\/c\/banner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/search\.qiumibao\.com\/hot\/word_list$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+body_rewrite_15 = type=http-response, pattern=^https:\/\/a\.qiumibao\.com\/ios\/config\/\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["skin","advert","advert_config","mall","httpdns","reward","pgame","corner_mark","liveshop","theme","pop","live_activity_push"]]]
+
+body_rewrite_22 = type=http-response, pattern=^https:\/\/guess\.qiumibao\.com\/api\/n\/rcd$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.banner"]]]
+
+body_rewrite_23 = type=http-response, pattern=^https:\/\/pre-match\.qiumibao\.com\/pre_match_data\/v\d\/\d+-\d+-\d+\/\d+_fund\.htm\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["'del(.data[]","|","select(.type","==","\"guide\"))'"]]]
+
+body_rewrite_24 = type=http-response, pattern=^https:\/\/guess\.qiumibao\.com\/api\/c\/menu$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.banner"]]]
+
+body_rewrite_25 = type=http-response, pattern=^https:\/\/s\.qiumibao\.com\/m\/ios\/json\/zhibo\/zuqiu\/\d+\/match\d+vl\.htm\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["ep_v2","ep_live"]]]
+
+[MITM]
+hostname = %APPEND% headline.qiumibao.com, a.qiumibao.com, rn.qiumibao.com, guess.qiumibao.com, s.qiumibao.com, pre-match.qiumibao.com, search.qiumibao.com
+
