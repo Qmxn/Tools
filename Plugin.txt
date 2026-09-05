@@ -1,6 +1,7 @@
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
 https://kelee.one/Tool/Loon/Lpx/1.1.1.1.lpx
+https://kelee.one/Tool/Loon/Lpx/5EPlay_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/36Kr_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/123NetWorkDisk_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/360SmartCamera_remove_ads.lpx
@@ -11,6 +12,7 @@ https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx
 https://kelee.one/Tool/Loon/Lpx/SnowCamera_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx
 https://kelee.one/Tool/Loon/Lpx/CCLive_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/DjDuoDuo_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Dlabel_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
 https://kelee.one/Tool/Loon/Lpx/DREAME_remove_ads.lpx
@@ -28,6 +30,7 @@ https://kelee.one/Tool/Loon/Lpx/Keep_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/KOOK_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Line_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/OKOK_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/PICOOC_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx
 https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx
@@ -71,6 +74,7 @@ https://kelee.one/Tool/Loon/Lpx/Beike_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/BiliComic_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/BitqiuPan_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/Bixin_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/BooHee_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx
@@ -109,6 +113,7 @@ https://kelee.one/Tool/Loon/Lpx/GuideRank_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/GaoDing_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/AlcidaeVideo_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/EasyBike_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/YunmaiScale_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/MrHema_remove_ads.lpx
@@ -126,6 +131,7 @@ https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx
 https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/JDWaimai_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/WPS_Documents_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/Jin10Data_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ChatCam_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
 https://kelee.one/Tool/Loon/Lpx/KuaiDi100_remove_ads.lpx
@@ -162,6 +168,7 @@ https://kelee.one/Tool/Loon/Lpx/miHoYoBBS_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/MojiWeather_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/MaiMai_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/FerrisWheel_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/MotorFans_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/CSG_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/AxWorkSchedule_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/PangguaiLife_remove_ads.lpx
@@ -173,6 +180,7 @@ https://kelee.one/Tool/Loon/Lpx/51Job_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/AutoHome_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/QiDian_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/SevenCat_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/Qbb_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/QtingFM_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/SodaMusic_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/QiXinBao_remove_ads.lpx
@@ -206,6 +214,7 @@ https://kelee.one/Tool/Loon/Lpx/NeteaseCloudMusic_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/PerfectWorldEsport_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/Weidian_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/WPForum_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Weimai_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx
@@ -231,6 +240,7 @@ https://kelee.one/Tool/Loon/Lpx/iMaiCai_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/CosmosPodcast_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Himalaya_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/OnTheWay_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/SinaStock_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Snowball_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ChaoXingStudy_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/XunLei_remove_ads.lpx
@@ -259,4 +269,5 @@ https://kelee.one/Tool/Loon/Lpx/EtouchEcalendar_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ZhuanZhuan_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx
 https://kelee.one/Tool/Loon/Lpx/ZongHeng_remove_ads.lpx
+https://kelee.one/Tool/Loon/Lpx/iWallBiZhi_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/ZuiYou_remove_ads.lpx
