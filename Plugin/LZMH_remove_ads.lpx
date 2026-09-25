@@ -1,1 +1,37 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="content-security-policy" content="default-src &#39;none&#39;; script-src &#39;nonce-sYWEbxfeBYhGiXTYIGPgnL&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce="sYWEbxfeBYhGiXTYIGPgnL">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: '1JX7gcPDuT.gPO7RHcrHBeEx4y_HQlFTeMuRU4XD9As-1790286855-1.2.1.1-gGin8xI8Or7yQRnNhsJzC.AhTWjdxcwHpiHQsg7gZnSFDT.2_ZqCH0syKW8sCKIw',cITimeS: '1790286855',cN: 'sYWEbxfeBYhGiXTYIGPgnL',cRay: 'a40506cd8a006289',cTplB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/Tool/Loon/Lpx/LZMH_remove_ads.lpx?__cf_chl_tk=xo.olThw1_KuvrVjAi4gssyxfaU9OrJ2rqWx7UZm8pE-1790286855-1.0.1.1-QeHTq_JjJ3vR0mk0yO0H160.uoONXZD4pGOI7roLH_Y",cvId: '3',cZone: 'kelee.one',fa:"/Tool/Loon/Lpx/LZMH_remove_ads.lpx?__cf_chl_f_tk=xo.olThw1_KuvrVjAi4gssyxfaU9OrJ2rqWx7UZm8pE-1790286855-1.0.1.1-QeHTq_JjJ3vR0mk0yO0H160.uoONXZD4pGOI7roLH_Y",md: 'BAmjZsKmH8SrNEdVozrMdGOlNRR5RsHTmeBotsB7wzo-1790286855-1.2.1.1-j72_0g95UgSps6fsoxgG0qXd_3Ogm1VQwkmKXGbClrmEeQM6iDc1xeuj01_0uaGJDTtrK6LwL1Zvsbfoko66aCAley_9Ly4cMK63KyyDceeMfNMITXcvlP0k1wBls.lDUbzDFGfjYSjWMdwGqhBhtuER4S_u46NPIR7QQ5noozknYnwStrOPAzbYdDVneT5jMWX24VPn5yXAsMAmyWzX.Mrad9OuewchSIK427qJPj6sS8tSxhnlPq.6pCcv_5ugC.2tqVfS0lPV3BTDSTOYgP_UNtt5h9yOIq.tHUuvhmkExZUWz9uF3fA9hPLtNhgFqMbx4YWq9tRHYrKtclQ9x6AKFzmAltpUZH5Nj0cGFFYdHzsBjJQELYq7XkS2cV.9a5WYjW36L.8r0qHStf.c99Cc9NipT475bKq_HeNbsHIr22XH15Tkke6ZeaJ8FOcNWsNaFGmFPgpRZknpkmhDCjkuPOR32KKN4SJ8w1Hcl9N2NvniyQiSJmv1z_LloC8C3h7SRolbp04dDtqf5XyJ_7NxfMDTAQqVcW9dGx_p7XyYJVxuqsBbCFOGlmI._VKx9EyTLr1V4GBOMMQOHPlRs7eqR3aVA6wIaqA55NoyNXCQMtkNsPVkODFjvNykmoesyktEA_mSe5azNbX4oCNlMJ6mPgLXfR6nbz3PRq4tHAmIK_U16kNL7oY6PbtBr0b23dDsiMWUB91MNaCR540SYzSgLiogFqSwG1ruTeFIV3.QaL_z0qNOreYSDO4q1xz1AXaqSAoEta5dvKosLyKJFJDpKoJGvwp_cK1gxmRrM7q_vsobBvjELFWvC94uFwhb6QaTIgJb4hTLrRXZrJYOx.EnXHZ93_ibyCh3NOYIwxwZCVfpPfOMG9Fv.28zkX6SQQp1gZp.9BTc0OZJ7ZbvJR6nzGNDZaB4mtspU6cRv93JRRIgWKhRpuvgPcXtNZ7vvbSC8n5SDwsuHWUz9oqzA6Q8WT.HuZE9DFiQuRVJTFtK4e5SXeM729kkK5.QfJq11SeRUwz0u6sUN.9TQ6gtrg',mdrd: '9PBk_gg_noC.mw.mYPRChd9edztpXf5jUg38lN3x2gw-1790286855-1.2.1.1-j9gQsXAZfX9rlaR.nEILxdEOEGFFP48tYRf_1PO.wlVxGBFspXhrCCKBC2LG82XHelfsZ9b50FfoII2q7v8LmTjTMqqt.RML3X9.NQDDXwfDYubSqDWiWnj6Dt.tCzfOGiXI4IE0jmF7Jaf5kE3co28bSlglAVHowJCKbgZ2pzbFokAqZVLedoT0bYsMVLu9p0tTvwiJxYrF1nL_wSw8U4z9uGCR3MzVmC.FlURQkXLSY2EIN2nOJn52Nr_PbsJ5PVlnS1k2S3Gn759XmPSDBPu5QRATLwLHiSmYV3Yk1Eqzd1inrdndTo3qVgC8ZTSDLJ6Lg24tN8qLHHIRCsA4ThXKUnunF1xNCE2gD4UCCT2dT9bLkWUTQIa8hKffKdIpM3dfuUQvRAZ7L06qqL2PWiZzVxTrM.CI8LoKwV3LbXpEHiDArixKIM7A245M0NbnE.DnWwrxVCxqoFQ7Oi.RVz0xK5oXGyd_UcrdMUYq_Ao',};var a = document.createElement('script');a.nonce = 'sYWEbxfeBYhGiXTYIGPgnL';a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a40506cd8a006289';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/Tool/Loon/Lpx/LZMH_remove_ads.lpx?__cf_chl_rt_tk=xo.olThw1_KuvrVjAi4gssyxfaU9OrJ2rqWx7UZm8pE-1790286855-1.0.1.1-QeHTq_JjJ3vR0mk0yO0H160.uoONXZD4pGOI7roLH_Y"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>
+#!name=联掌门户去广告
+# 引用链接: https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx
+#!desc=移除开屏广告、弹窗，移除首页、服务和发现页面无用内容。
+#!openUrl=https://apps.apple.com/app/id1070838360
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag=去广告
+#!system=
+#!system_version=
+#!loon_version=3.4.0(962)
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LZMH.png
+#!date=2026-08-22 02:46:00
+
+[Rewrite]
+^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v1\/app3rd\/getApp3rdGenreList\? reject-dict
+
+^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v1\/ad\/ reject-dict
+
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/getAdSlotList$ reject-dict
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/requestAd$ reject-dict
+
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/getSdkStartConfigList$ reject-dict
+
+^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v1\/index\/getRecommendList\? reject-dict
+
+^https:\/\/yuudnn\.lz-qs\.com\/lzmh_app_api\/o2o\/api\/v2\/o2o\/homeInfo$ reject-dict
+
+^https:\/\/yuudnn\.lz-qs\.com\/lzmh_app_api\/o2o\/api\/v2\/o2o\/homeShopList$ reject-dict
+
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/getSdkAdSlotList$ reject-dict
+
+^http:\/\/lzmh\.lz-qs\.com:5090\/resource\/download\/ reject
+
+^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v2\/user\/getUserBaseInfoAndConfig\? response-body-json-del value.config
+
+[MitM]
+hostname=lzmh.lz-qs.com, yuudnn.lz-qs.com

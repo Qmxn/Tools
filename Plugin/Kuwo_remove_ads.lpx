@@ -1,1 +1,39 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="content-security-policy" content="default-src &#39;none&#39;; script-src &#39;nonce-TKRGMHq3FXgQqPGPOVADTU&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce="TKRGMHq3FXgQqPGPOVADTU">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'oqAv7rkxdp5Y7Ge7fP8YW56jR79vhie7LpFHwb9SVh4-1790286855-1.2.1.1-C6hfxIFbwKPHIgWFEcKnjnYtRnYjIxrM9GuUqL1PaPyS1vbbH2RqpOMzaNXD16MJ',cITimeS: '1790286855',cN: 'TKRGMHq3FXgQqPGPOVADTU',cRay: 'a40506cd690a1c37',cTplB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/Tool/Loon/Lpx/Kuwo_remove_ads.lpx?__cf_chl_tk=bTo_XMbhMdiRsEeAqPkw4hdRBnm8wrkcbi6QVXP_t1I-1790286855-1.0.1.1-u6Np_CCs..ECykGpVTWMcwegriyXXWmPg9PI7wukz58",cvId: '3',cZone: 'kelee.one',fa:"/Tool/Loon/Lpx/Kuwo_remove_ads.lpx?__cf_chl_f_tk=bTo_XMbhMdiRsEeAqPkw4hdRBnm8wrkcbi6QVXP_t1I-1790286855-1.0.1.1-u6Np_CCs..ECykGpVTWMcwegriyXXWmPg9PI7wukz58",md: '0vag7DtFp_JWhBgsGCcahDofIpyX_rcFVsJQ4.xeF7o-1790286855-1.2.1.1-7lUSD7d.eUe_sxrDvD7CKj5gvlhSuCjmnmKxsoEKWWGCTTtodI_qETyG4OJdEQ1tqzq07aTDFFd2zVWcuIiz2eeg4vOLaMl.wCKv9DPFATAcibzeYRkA0XeSD6VUeMH4msmtEysFn7jT6DncndJkVAnYSRpL4d0NJk2euH5kvn439w0hnUgHHMlA8x.PLY72InrmJ.xFOB_isdqWqCZfYIYCnZFxyUe5pLiqNUrxQSR1THG8__4xqUSiO5cQdEB5S3W1jT5utu_LLGahV6PkrJSTCz6130Im84kg1XL2vN4zeQa_0SAPT09Reu0UlDD2RH.KkXyg0hxaUk62DSbLPshOuufGoJX.3FZ69stMXbqWax3ze840UEXva5lF6G.P808PHamNfVzFL8J8cNLkPrv.n30DeAtjYlpw2HHaGWSxaIEqj_YY83FfmN16E4NL.pbXZf9nHHC6S0fZEUqJmN_xkPlUdRvsCrq.2_ApEKx_bwNpku0r4L673MlJasNYHJIifjQMZnf94eFQ1uPB.Ye_KkOIxiv7fFYwzSkps0KUsMr_Y4DWidTZRzyqkR94zo62vB1DMdCDb5hLeum3aa_vtIUMGiqn5gxp3o2XtjSaoEqHsq9x2F87ve0QHFvm2uxdFIlF3NeO6njiJ_msP9l.k_cY1CbTssikD7Bx0ewlmGyF7KlWM4Y1r.zT5xsR5b2MVWOv4u.sOoxqiqP15ANy4OLHY5nNtMEe7ZgEOT_1MUwn6RLitH7.u5uZA._6M2FFcWu2WvwDPtf2TQ9vZm29O7XfQAJolWO2BFLzUJPO9QotgRmeIMBW1xTR13hsl75qgUB5hiXpAZTZp09prO.6JS709y_O3k1tmnW7LMLZnkoQiPsBTJhBClvrE1Wb4DqnIOXTNkW8EsGjSFKc5Wi82kCmJvG8UgyR0Ltj083ODflND3xjxOoAF9vPCy192iMQ2tUhmxbHttG5R.ULqyyRgWvEzpRRNPcoRFjyIJtbmJiWOHIvxDYVaZM28VfykMNiUFYg0zKvonVu_nrpHw',mdrd: 'rgptNOg.Vin7vgC1FRj.1R0XaJzvvzex9NX7xUsqurs-1790286855-1.2.1.1-HDDnIglfBJHySE6FsCw8qYn_l3EBKDJ6MUaW8pT9q0N5LQ9gaHyQtlU5O6ZVZYTsSEDfYgoR.dDr1hWQ3XXaU1oX3fOk.Y2RZH.AG0RsHYRsNEFgqQSsl6WsThomLqyqt6.avbwuefF.y8K_mldBiNlScaX46NMdrnd7YwegHCGf7v0Q9z3wi.xkHn8LeI5dC6wZJz_varpOF3NKMU_QOrCw1hNjvMDXXzU8Y_EPnRSholWRgtjpzSPJ9g6rFiW2fHPoObkrejmVfxi8GHmK5JwfQcNvUersjpTmdTWzZVDyC_FuTc7kN31rUXLfXromp.E9Bajy0lpy6a3bC5WbU5FHZv1VmZx77zImWqZ58ZENYkSpThRldnyPUVp8wEEKeCzHzWGRE7mOLZxSmiDQYha_L7Ff2jbTmnG0EankAdtv.GB3gbbkEUAYmnPi9guIKLzlABx_WY9nVY8TglbrzW1XG9lSmB5UIH8BNnh88cQ',};var a = document.createElement('script');a.nonce = 'TKRGMHq3FXgQqPGPOVADTU';a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a40506cd690a1c37';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/Tool/Loon/Lpx/Kuwo_remove_ads.lpx?__cf_chl_rt_tk=bTo_XMbhMdiRsEeAqPkw4hdRBnm8wrkcbi6QVXP_t1I-1790286855-1.0.1.1-u6Np_CCs..ECykGpVTWMcwegriyXXWmPg9PI7wukz58"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>
+#!name=酷我音乐去广告
+# 引用链接: https://kelee.one/Tool/Loon/Lpx/Kuwo_remove_ads.lpx
+#!desc=移除开屏广告、各类弹窗、悬浮窗、各类横幅广告、信息流广告、歌词评论区广告和播放器界面广告，精简侧边栏。
+#!openUrl=https://apps.apple.com/app/id588673713
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag=去广告
+#!system=
+#!system_version=
+#!loon_version=3.4.0(962)
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Kuwo.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/AdService\/", REJECT-DICT
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/user\/freeMode\/", REJECT-DICT
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/pasterAdvert\/", REJECT-DICT
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/startup\/config", REJECT-DICT
+URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/EcomResourceServer\/", REJECT-DICT
+IP-CIDR, 111.206.98.63/32, REJECT, no-resolve
+
+URL-REGEX, "^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s", REJECT-DICT
+
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/newMenuList\/menuListInfo", REJECT-DICT
+
+URL-REGEX, "^http:\/\/vip\d\.kuwo\.cn\/vip\/v\d\/sysinfo\?op=getRePayAndDoPayBox", REJECT-DICT
+
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/album\/adBar\/", REJECT-DICT
+
+[Rewrite]
+^https:\/\/vip\d\.kuwo\.cn\/commercia\/vipconf\/projectPage\/getPageContent reject-dict
+^https:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/user\/info reject-dict
+
+^https:\/\/appi\.kuwo\.cn\/kuwopay\/personal\/cells reject-dict
+
+^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/tingshu\/index\/radio response-body-json-jq 'walk(if type == "object" and .type == "stripAdvert" then del(.child) else . end)'
+
+[MitM]
+hostname=appi.kuwo.cn, mc.tencentmusic.com, vip*.kuwo.cn, tingshu.kuwo.cn
