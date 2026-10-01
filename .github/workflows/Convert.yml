@@ -1,0 +1,80 @@
+name: Convert
+
+on:
+  schedule:
+    - cron: '35 19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  Convert:
+    runs-on: ubuntu-latest
+    permissions:               # <-- 添加这部分
+      contents: write          # 已有的写入权限
+      actions: write           # <-- 新增，用于删除 Workflow Runs
+    env:
+      TZ: 'Asia/Shanghai'
+
+    steps:
+      - name: 1. 检出当前仓库
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: 2. 克隆依赖的 Script-Hub（若为公开仓库，无需 token）
+        uses: actions/checkout@v7
+        with:
+          repository: Script-Hub-Org/Script-Hub
+          path: Script-Hub
+          # 如需固定版本，可指定 ref: 'main' 或某个 tag
+          # token: ${{ secrets.PAT_TOKEN }}   # 注释掉，改用默认 GITHUB_TOKEN
+
+      - name: 3. 克隆源插件仓库 Qmxn/Tools（若为公开仓库，无需 token）
+        uses: actions/checkout@v7
+        with:
+          repository: Qmxn/Tools
+          path: Tools
+          # token: ${{ secrets.PAT_TOKEN }}   # 注释掉，改用默认 GITHUB_TOKEN
+
+      - name: 4. 设置 Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 5. 安装依赖
+        run: npm install
+
+      - name: 6. 执行转换脚本
+        id: convert
+        run: node script/converter.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # 默认 Token，用于 API 调用
+          REPO_API_URL: "https://api.github.com/repos/Qmxn/Tools/contents/Plugin"
+          REPO_REF: "X"
+
+      - name: 7. 检查是否有成功转换
+        if: steps.convert.outputs.converted_count == 0
+        run: |
+          echo "所有插件转换失败，跳过提交。"
+          exit 1
+
+      - name: 8. 生成提交信息
+        run: echo "COMMIT_MSG=更新插件 $(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+      - name: 9. 提交并推送
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "${{ env.COMMIT_MSG }}"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          file_pattern: "Modules/*.sgmodule"
+
+      - name: 10. 清理旧 workflow runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 2

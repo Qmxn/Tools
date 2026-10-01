@@ -1,0 +1,10 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 运行时缓存或临时下载项
+Script-Hub/
+Tools/
+error.log

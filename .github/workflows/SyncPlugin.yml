@@ -1,0 +1,172 @@
+name: Sync Plugin
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_plugins:
+        description: '同步插件 (Sync Plugin)'
+        required: true
+        type: boolean
+        default: true
+  schedule:
+    - cron: "0 19 * * *"
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  SyncPlugin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TZ: 'Asia/Shanghai'
+
+    steps:
+      - name: 检出目标仓库
+        uses: actions/checkout@v7
+        with:
+          repository: Qmxn/Tools
+          path: Tools
+
+      - name: 插件同步 (多线程)
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.run_plugins == 'true' }}
+        run: |
+          echo "🟩 开始并发同步插件..."
+          mkdir -p Tools/Plugin
+          Plugin_FILE_PATH="Tools/Plugin.txt"
+
+          if [ ! -f "$Plugin_FILE_PATH" ]; then
+              echo "❌ ERROR: Plugin.txt 不存在于 $Plugin_FILE_PATH"
+              exit 1
+          fi
+
+          # ---------- 缓存清洗后的插件列表 ----------
+          CLEAN_LIST="/tmp/plugin_list_clean.txt"
+          sed -e 's/\r//g' -e '/^[[:space:]]*$/d' -e '/^[[:space:]]*#/d' "$Plugin_FILE_PATH" | sort -u > "$CLEAN_LIST"
+          plugin_count=$(wc -l < "$CLEAN_LIST" | xargs)
+          echo "📦 共加载 ${plugin_count} 个插件"
+
+          # 清理旧日志与锁文件
+          rm -f /tmp/error.log /tmp/error.log.lock
+
+          # 导出下载处理函数
+          download_plugin() {
+            local original_url="$1"
+            [ -z "$original_url" ] && return 0
+
+            local plugin_filename
+            plugin_filename="$(basename "${original_url%.*}").lpx"
+            local plugin_path="Tools/Plugin/${plugin_filename}"
+            
+            local mirrors=("git.repcz.link" "git.unx.indevs.in")
+            local download_successful=false
+            local custom_ua="StashCore/2.7.1 Stash/2.7.1 Clash/1.11.0"
+
+            if [[ "$original_url" == *"kelee.one"* ]]; then
+              for mirror in "${mirrors[@]}"; do
+                local download_url="${original_url/https:\/\/kelee.one/https:\/\/$mirror/kelee.one}"
+                echo "尝试 [$plugin_filename] -> $download_url"
+                local curl_output
+                curl_output=$(curl -A "$custom_ua" --connect-timeout 8 --max-time 15 -L -s -w "%{http_code}" -o "$plugin_path" "$download_url" || true)
+                local http_code="${curl_output: -3}"
+                if [ "$http_code" -eq 200 ] && [ -s "$plugin_path" ]; then
+                  download_successful=true
+                  break
+                else
+                  echo "⚠️ [$plugin_filename] 镜像 $mirror 失败 (HTTP $http_code)"
+                fi
+              done
+            else
+              echo "尝试 [$plugin_filename] -> $original_url"
+              local curl_output
+              curl_output=$(curl -A "$custom_ua" --connect-timeout 8 --max-time 15 -L -s -w "%{http_code}" -o "$plugin_path" "$original_url" || true)
+              local http_code="${curl_output: -3}"
+              if [ "$http_code" -eq 200 ] && [ -s "$plugin_path" ]; then
+                download_successful=true
+              else
+                echo "⚠️ [$plugin_filename] 下载失败 (HTTP $http_code)"
+              fi
+            fi
+
+            if [ "$download_successful" = true ]; then
+              if [ -s "$plugin_path" ]; then
+                # 安全插入引用注释（不破坏 #! 行）
+                if head -n1 "$plugin_path" | grep -q "^#!"; then
+                  sed -i "1a # 引用链接: $original_url" "$plugin_path"
+                else
+                  sed -i "1i # 引用链接: $original_url" "$plugin_path"
+                fi
+                echo "✅ [$plugin_filename] 下载成功"
+              else
+                echo "❌ [$plugin_filename] 文件为空"
+              fi
+
+            else
+
+              # 使用 flock 确保多线程追加写入日志时的文件安全性
+              flock /tmp/error.log.lock -c "echo \"❌ 错误：$plugin_filename 处理失败\" >> /tmp/error.log"
+            fi
+          }
+
+          export -f download_plugin
+
+          # 使用 xargs 并发下载
+          < "$CLEAN_LIST" xargs -d '\n' -P 8 -I {} bash -c 'download_plugin "$1"' _ "{}"
+
+          if [ -f /tmp/error.log ]; then
+            echo "-------------------"
+            echo "❌ 失败汇总（共 $(wc -l < /tmp/error.log) 个）："
+            cat /tmp/error.log
+          else
+            echo "-------------------"
+            echo "🎉 所有插件同步完成！"
+          fi
+
+      - name: 提交并推送更改
+        run: |
+          cd Tools
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git config pull.rebase true
+          git config rebase.autoStash true
+
+          if [[ -z "$(git status -s)" ]]; then
+            echo "无变更需要提交"
+            exit 0
+          fi
+
+          git add .
+          git commit -m "更新插件 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+
+          if ! git pull origin HEAD --rebase; then
+            echo "❌ Rebase 冲突，自动放弃提交"
+            git rebase --abort 2>/dev/null || true
+            git stash drop 2>/dev/null || true
+            exit 1
+          fi
+
+          if ! git push origin HEAD; then
+            echo "❌ 推送失败，可能因权限或分支保护"
+            exit 1
+          fi
+
+          echo "✅ 提交并推送成功"
+
+      - name: 检查下载错误
+        if: always()
+        run: |
+          if [ -f /tmp/error.log ]; then
+            echo "❌ 存在下载失败的插件，工作流标记为失败。"
+            cat /tmp/error.log
+            exit 1
+          else
+            echo "✅ 无下载错误"
+          fi
+
+      - name: 清理旧 workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 2
