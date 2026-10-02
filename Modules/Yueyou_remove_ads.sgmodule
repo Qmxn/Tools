@@ -4,15 +4,12 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Yueyou.png
 #!openUrl=https://apps.apple.com/app/id1066723192
 #!tag=去广告
-#!loon_version=3.4.0(962)
+#!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 
 [Rule]
 DOMAIN,ads.reader.yueyouxs.com,REJECT
-
-[Script]
-body_rewrite_15 = type=http-response, pattern=^https:\/\/goway\.reader\.yueyouxs\.com\/assemble\/app\/basic\/getAppInfo\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=[["json-del",["data.isShowDLPopup","data.isShowGame","data.touTiaoShowDlPopup","data.offLineDownload.WatchVideoBtnDesc","data.readVipFirstCfg","data.readVipNormalCfg","data.notifyAd","data.hotStartSplashTime","data.hotStartReqSwitch","data.isShowBFTab","data.popReqDelayTime","data.benefitCfg","data.chestTask","data.hotStartAd","data.activeTagList","data.secondOrderCfg","data.secondOrderList","data.blockedWordsCfg","data.aaReportListCfg","data.pddAdSwitch","data.isShowShelfAuthPopup","data.firstPopUpAmount"]],["json-replace",[["data.isAdClosed",true]]]]
 
 [MITM]
 hostname = %APPEND% goway.reader.yueyouxs.com
