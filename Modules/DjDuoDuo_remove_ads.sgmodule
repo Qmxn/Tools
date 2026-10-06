@@ -1,13 +1,3 @@
-#!name=DJ多多去广告
-#!desc=移除开屏广告及歌单广告
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DjDuoDuo.png
-#!openUrl=https://apps.apple.com/app/id1039764887
-#!tag=去广告
-#!loon_version=3.5.1(998)
-#!homepage=https://hub.kelee.one
-#!date=2026-10-02 13:57:49
-
-[MITM]
-hostname = %APPEND% api.dianyinduoduo.com
+#!name=https%3A%2F%2Fraw
+#!desc=https%3A%2F%2Fraw
 
