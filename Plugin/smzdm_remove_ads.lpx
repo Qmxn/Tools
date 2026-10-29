@@ -1,62 +1,149 @@
-#!name=什么值得买去广告
-# 引用链接: https://kelee.one/Tool/Loon/Lpx/smzdm_remove_ads.lpx
-#!desc=移除开屏广告、信息流广告、各类横幅广告、搜索页广告、文章内广告，移除活动皮肤、精简我的页面。
-#!openUrl=https://apps.apple.com/app/id518213356
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!tag=去广告
-#!system=
-#!system_version=
-#!loon_version=3.5.1(998)
-#!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/smzdm.png
-#!date=2026-10-02 13:57:49
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+    <!--<![endif]-->
+    <head>
+        <title>Origin DNS error | kelee.one | Cloudflare</title>
+        <meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" /> <script>
+  (function(){if(document.addEventListener&&window.XMLHttpRequest&&JSON&&JSON.stringify){var e=function(a){var c=document.getElementById("error-feedback-survey"),d=document.getElementById("error-feedback-success"),b=new XMLHttpRequest;a={event:"feedback clicked",properties:{errorCode: 1016 },helpful:a,version: 1 };b.open("POST","https://sparrow.cloudflare.com/api/v1/event");b.setRequestHeader("Content-Type","application/json");b.setRequestHeader("Sparrow-Source-Key","c771f0e4b54944bebf4261d44bd79a1e");
+b.send(JSON.stringify(a));c.classList.add("feedback-hidden");d.classList.remove("feedback-hidden")};document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("error-feedback"),c=document.getElementById("feedback-button-yes"),d=document.getElementById("feedback-button-no");"classList"in a&&(a.classList.remove("feedback-hidden"),c.addEventListener("click",function(){e(!0)}),d.addEventListener("click",function(){e(!1)}))})}})();
+</script>
+        <script
+            defer
+            src="https://performance.radar.cloudflare.com/beacon.js"
+        ></script>
+    </head>
+    <body>
+        <div id="cf-wrapper">
+            <div
+                class="cf-alert cf-alert-error cf-cookie-error hidden"
+                id="cookie-alert"
+                data-translate="enable_cookies"
+            >
+                Please enable cookies.
+            </div>
+            <div id="cf-error-details" class="p-0">
+                <header
+                    class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-15 antialiased"
+                >
+                    <h1
+                        class="inline-block md:block mr-2 md:mb-2 font-light text-60 md:text-3xl text-black-dark leading-tight"
+                    >
+                        <span data-translate="error">Error</span>
+                        <span>1016</span>
+                    </h1>
+                    <span
+                        class="inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed"
+                        >Ray ID: a525cf3cd9df2c97 &bull;</span
+                    >
+                    <span
+                        class="inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed"
+                        >2026-10-29 23:02:43 UTC</span
+                    >
+                    <h2
+                        class="text-gray-600 leading-1.3 text-3xl lg:text-2xl font-light"
+                    >
+                        Origin DNS error
+                    </h2>
+                </header>
+                
+                
+                <section class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+                    <div id="what-happened-section" class="w-1/2 md:w-full">
+                        <h2
+                            class="text-3xl leading-tight font-normal mb-4 text-black-dark antialiased"
+                            data-translate="what_happened"
+                        >
+                            What happened?
+                        </h2>
+                        
+                            <p>You've requested a page on a website (kelee.one) that is on the <a href="https://www.cloudflare.com/5xx-error-landing/" target="_blank">Cloudflare</a> network. Cloudflare is currently unable to resolve your requested domain (kelee.one).</p>
+                        
+                        
+                        <p>
+                            Please see
+                            <a
+                                rel="noopener noreferrer"
+                                href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1016/"
+                                target="_blank"
+                                >https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1016/</a
+                            >
+                            for more details.
+                        </p>
+                        
+                    </div>
 
-[Rule]
-DOMAIN, adx-api.zdmimg.com, REJECT
+                    
+                    <div
+                        id="resolution-copy-section"
+                        class="w-1/2 mt-6 text-15 leading-normal"
+                    >
+                        <h2
+                            class="text-3xl leading-tight font-normal mb-4 text-black-dark antialiased"
+                            data-translate="what_can_i_do"
+                        >
+                            What can I do?
+                        </h2>
+                        <p><strong>If you are a visitor of this website:</strong><br />Please try again in a few minutes.</p><p><strong>If you are the owner of this website:</strong><br />Check your DNS settings. If you are using a CNAME origin record, make sure it is valid and resolvable. <a rel="noopener noreferrer" href="https://support.cloudflare.com/hc/en-us/articles/234979888-Error-1016-Origin-DNS-error">Additional troubleshooting information here.</a></p>
+                    </div>
+                    
+                </section>
+                
 
-[Rewrite]
-request if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/util\/loading\?/i then reject_dict(200)
+                <div class="feedback-hidden py-8 text-center" id="error-feedback">
+    <div id="error-feedback-survey" class="footer-line-wrapper">
+        Was this page helpful?
+        <button
+            class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded"
+            id="feedback-button-yes"
+            type="button"
+        >
+            Yes
+        </button>
+        <button
+            class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded"
+            id="feedback-button-no"
+            type="button"
+        >
+            No
+        </button>
+    </div>
+    <div class="feedback-success feedback-hidden" id="error-feedback-success">
+        Thank you for your feedback!
+    </div>
+</div> <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">a525cf3cd9df2c97</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">40.124.29.227</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+            </div>
+            <!-- /#cf-error-details -->
+        </div>
+        <!-- /#cf-wrapper -->
 
-response if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/util\/update$/i then response.json.replace(["data.silence_local_push", "data.baichuan_redirect_switch"], [0, 0])
-
-response if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/util\/update$/i then response.json.delete(["data.silence_local_push_msg", "data.video_cache_num_configs", "data.haojia_widget", "data.widget", "data.operation_float"])
-
-response if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/util\/update$/i then response.json.jq("def r: if type==\"object\" then if has(\"ad_campaign_name\") and (.ad_campaign_name|type==\"string\") and (.ad_campaign_name|test(\"\\\\S\")) then empty else . end elif type==\"array\" then map(r) else . end; .data.operation_float |= map(map(r))")
-
-response if ${url} ~= /^https:\/\/homepage-api\.smzdm\.com\/v3\/home\?/i then response.json.jq_file("https://kelee.one/Resource/JQLang/smzdm/home_smzdm_remove_ads.jq")
-
-request if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/mychannel\/list$/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/h5\.smzdm\.com\/user\/coupon\/coupon_list\?/i then reject(404)
-
-response if ${url} ~= /^https:\/\/haojia-api\.smzdm\.com\/home\/list\?/i then response.json.delete("data.header_operation.theme")
-
-response if ${url} ~= /^https:\/\/haojia-api\.smzdm\.com\/home\/list\?/i then response.json.jq(".data.rows |= map(select(.cell_type == \"39001\")) | .data.banner_v2 |= map(select(.cell_type == \"21028\"))")
-
-response if ${url} ~= /^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul\?/i then response.json.delete("data.super_coupon")
-
-response if ${url} ~= /^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul\?/i then response.json.delete("data.banner")
-
-response if ${url} ~= /^https:\/\/user-api\.smzdm\.com\/vip$/i then response.json.delete(["data.activity_entrance_info", "data.big_banner", "data.top_banner", "data.banner_switch", "data.yaoqingshaiwu", "data.right_info"])
-
-request if ${url} ~= /^https:\/\/user-api\.smzdm\.com\/vip\/bottom_card_list\?/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/article-api\.smzdm\.com\/publish\/get_bubble\?/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/s-api\.smzdm\.com\/sou\/search_default_keyword\?/i then reject_dict(200)
-
-response if ${url} ~= /^https:\/\/s-api\.smzdm\.com\/sou\/list_v10\?/i then response.json.jq(".data.rows |= map(select(.model_type != \"ads\")) | .data.top_aladdin |= map(select(has(\"ad\") | not))")
-
-response if ${url} ~= /^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\?/i then response.json.delete(["data.search_faxian", "data.tonglan", "data.hongbao"])
-
-response if ${url} ~= /^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\?/i then response.json.jq(".data.hot_tab |= (if type == \"array\" then map(select(.search_method != \"热点主题榜\")) else . end) | if .data.hot_tab then .data.hot_tab |= map(if .search_method == \"热搜榜搜索热榜\" and .rows then .rows |= map(select(.pos != null and ((.pos | tonumber) != null))) else . end) else . end")
-
-request if ${url} ~= /^https:\/\/s-api\.smzdm\.com\/sou\/popup_coupon\?/i then reject_dict(200)
-
-response if ${url} ~= /^https:\/\/haojia-api\.smzdm\.com\/detail\/\d+\?/i then response.json.delete("data.quan_log")
-response if ${url} ~= /^https:\/\/haojia-cdn\.smzdm\.com\/preload\/\d+\/fiphone\/v\d+_\d+_\d+\/wx\d+\/im\d+\/[0-9a-z]+\/[0-9a-z]+\.json$/i then response.json.delete("data.quan_log")
-
-response if ${url} ~= /^https:\/\/post\.m\.smzdm\.com\/ajax_app\/ajax_get_footer_list\?/i then response.json.delete(["data.tuiguang_ad", "data.activity_banner"])
-
-[MitM]
-hostname=app-api.smzdm.com, homepage-api.smzdm.com, h5.smzdm.com, haojia-api.smzdm.com, haojia.m.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, s-api.smzdm.com, haojia-cdn.smzdm.com, post.m.smzdm.com
+         <script>
+    window._cf_translation = {};
+    
+    
+  </script> 
+        
+    </body>
+</html>

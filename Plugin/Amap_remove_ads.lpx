@@ -1,60 +1,149 @@
-#!name=高德地图去广告
-# 引用链接: https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
-#!desc=移除开屏广告、首页推荐、搜索推荐、打车广告、地点推荐及广告，精简我的页面。
-#!openUrl=https://apps.apple.com/app/id461703208
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!tag=去广告
-#!system=
-#!system_version=
-#!loon_version=3.4.0(962)
-#!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png
-#!date=2026-10-20 12:06:08
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+    <!--<![endif]-->
+    <head>
+        <title>Origin DNS error | kelee.one | Cloudflare</title>
+        <meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" /> <script>
+  (function(){if(document.addEventListener&&window.XMLHttpRequest&&JSON&&JSON.stringify){var e=function(a){var c=document.getElementById("error-feedback-survey"),d=document.getElementById("error-feedback-success"),b=new XMLHttpRequest;a={event:"feedback clicked",properties:{errorCode: 1016 },helpful:a,version: 1 };b.open("POST","https://sparrow.cloudflare.com/api/v1/event");b.setRequestHeader("Content-Type","application/json");b.setRequestHeader("Sparrow-Source-Key","c771f0e4b54944bebf4261d44bd79a1e");
+b.send(JSON.stringify(a));c.classList.add("feedback-hidden");d.classList.remove("feedback-hidden")};document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("error-feedback"),c=document.getElementById("feedback-button-yes"),d=document.getElementById("feedback-button-no");"classList"in a&&(a.classList.remove("feedback-hidden"),c.addEventListener("click",function(){e(!0)}),d.addEventListener("click",function(){e(!1)}))})}})();
+</script>
+        <script
+            defer
+            src="https://performance.radar.cloudflare.com/beacon.js"
+        ></script>
+    </head>
+    <body>
+        <div id="cf-wrapper">
+            <div
+                class="cf-alert cf-alert-error cf-cookie-error hidden"
+                id="cookie-alert"
+                data-translate="enable_cookies"
+            >
+                Please enable cookies.
+            </div>
+            <div id="cf-error-details" class="p-0">
+                <header
+                    class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-15 antialiased"
+                >
+                    <h1
+                        class="inline-block md:block mr-2 md:mb-2 font-light text-60 md:text-3xl text-black-dark leading-tight"
+                    >
+                        <span data-translate="error">Error</span>
+                        <span>1016</span>
+                    </h1>
+                    <span
+                        class="inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed"
+                        >Ray ID: a525cec3c80a4ac0 &bull;</span
+                    >
+                    <span
+                        class="inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed"
+                        >2026-10-29 23:02:24 UTC</span
+                    >
+                    <h2
+                        class="text-gray-600 leading-1.3 text-3xl lg:text-2xl font-light"
+                    >
+                        Origin DNS error
+                    </h2>
+                </header>
+                
+                
+                <section class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+                    <div id="what-happened-section" class="w-1/2 md:w-full">
+                        <h2
+                            class="text-3xl leading-tight font-normal mb-4 text-black-dark antialiased"
+                            data-translate="what_happened"
+                        >
+                            What happened?
+                        </h2>
+                        
+                            <p>You've requested a page on a website (kelee.one) that is on the <a href="https://www.cloudflare.com/5xx-error-landing/" target="_blank">Cloudflare</a> network. Cloudflare is currently unable to resolve your requested domain (kelee.one).</p>
+                        
+                        
+                        <p>
+                            Please see
+                            <a
+                                rel="noopener noreferrer"
+                                href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1016/"
+                                target="_blank"
+                                >https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1016/</a
+                            >
+                            for more details.
+                        </p>
+                        
+                    </div>
 
-[Rewrite]
-request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?/i then reject_dict(200)
+                    
+                    <div
+                        id="resolution-copy-section"
+                        class="w-1/2 mt-6 text-15 leading-normal"
+                    >
+                        <h2
+                            class="text-3xl leading-tight font-normal mb-4 text-black-dark antialiased"
+                            data-translate="what_can_i_do"
+                        >
+                            What can I do?
+                        </h2>
+                        <p><strong>If you are a visitor of this website:</strong><br />Please try again in a few minutes.</p><p><strong>If you are the owner of this website:</strong><br />Check your DNS settings. If you are using a CNAME origin record, make sure it is valid and resolvable. <a rel="noopener noreferrer" href="https://support.cloudflare.com/hc/en-us/articles/234979888-Error-1016-Origin-DNS-error">Additional troubleshooting information here.</a></p>
+                    </div>
+                    
+                </section>
+                
 
-response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?/i then response.json.delete(["data.adStatementConfig", "data.adCustomerRetainArchitecture", "data.adImEntryConfig", "data.adVenueConfig", "data.adPerfSwitch", "data.EndNaviC3AdCard", "data.infoCpcReport", "data.hotsaleConfig", "data.marketing_resource_config", "data.coupon_risk_asac", "data.commonCouponSceneLog", "data.sug_coupon_opt", "data.giftEntryConfig", "data.splashscreen", "data.SplashScreenControl", "data.splashview_config", "data.feedback_banner", "data.TrainOrderBanner", "data.nearby_business_popup", "data.shortcut_popup_frequency", "data.tel_retention_popup", "data.hotel_activity", "data.taxi_activity", "data.hotel_privilege", "data.sportsActivityConfig", "data.activity_qingke_contry_control", "data.920bestwishes", "data.custom_consultdata.widget_guide", "data.free_ride", "data.homepage_resource_config", "data.home_message_guide", "data.hotel_tipsicon", "data.sur_bar", "data.nearby_map_entry_guide", "data.comment_info", "data.small_biz_index", "data.small_biz_fun", "data.setpagesearch", "data.wallet"])
+                <div class="feedback-hidden py-8 text-center" id="error-feedback">
+    <div id="error-feedback-survey" class="footer-line-wrapper">
+        Was this page helpful?
+        <button
+            class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded"
+            id="feedback-button-yes"
+            type="button"
+        >
+            Yes
+        </button>
+        <button
+            class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded"
+            id="feedback-button-no"
+            type="button"
+        >
+            No
+        </button>
+    </div>
+    <div class="feedback-success feedback-hidden" id="error-feedback-success">
+        Thank you for your feedback!
+    </div>
+</div> <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">a525cec3c80a4ac0</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">40.124.29.227</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+            </div>
+            <!-- /#cf-error-details -->
+        </div>
+        <!-- /#cf-wrapper -->
 
-response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?/i then response.json.jq_file("https://kelee.one/Resource/JQLang/Amap/updatable.jq")
-
-response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?/i then response.json.jq("del(.data.tipData, .data.wallet) | .data.cardList |= map(select(.dataKey == \"MineNewFootprintCard\" or .dataKey == \"MineNewBEntranceCardV4\")) | (.data.cardList[] | select(.dataKey == \"MineNewBEntranceCardV4\") | .content.entranceList_1) |= map(select(.id == 7 or .id == 8 or .id == 10 or .id == 17)) | (.data.cardList[] | select(.dataKey == \"MineNewBEntranceCardV4\") | .content.entranceList_2) |= map(select(.id == 32 or .id == 4 or .id == 9 or .id == 16 or .id == 14))")
-
-response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\?/i then response.json.delete("$.data.shadingWords")
-response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\?/i then response.json.jq(".data.toolsRecommend.data.default |= map(select(.id == 102 or .id == 103 or .id == 106 or .id == 151))")
-
-response if ${url} ~= /^https:\/\/sns\.amap\.com\/ws\/opc\/tools\/list\?/i then response.json.jq("(if (type == \"object\") and ((.data | type) == \"object\") and ((.data.category | type) == \"array\") then (.data.category[] | select(type == \"object\") | .tools | select(type == \"array\") | .[] | select(type == \"object\")) |= del(.tips) else . end) | (if (type == \"object\") and ((.data | type) == \"object\") and ((.data.category | type) == \"array\") then (.data.category[] | select(type == \"object\") | .tools | select(type == \"array\")) |= map(select(if type == \"object\" then (((.id | type) == \"string\" and .id == \"547\") or ((.id | type) == \"number\" and .id == 547)) | not else true end)) else . end)")
-
-request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-aiqs\?/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\?/i then reject_dict(200)
-
-response if ${url} ~= /^https:\/\/info\.amap\.com\/ws\/c3frontend\/af-search\/search\?/i then response.json.jq("if (try (.data.modules.quickLink.data.list | type) catch null) == \"array\" then .data.modules.quickLink.data.list |= map(if type == \"object\" and (.badge | type) == \"object\" and (.badge | has(\"text\")) then .badge.text = \"\" else . end) else . end")
-
-request if ${url} ~= /^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\?/i then reject_dict(200)
-
-response if ${url} ~= /^https:\/\/m5-zb\.amap\.com\/ws\/boss\/car\/order\/content_info\?/i then response.json.delete(["data.lubanData.skin", "data.lubanData.kingToolBoxBubble", "data.lubanData.popup"])
-
-response if ${url} ~= /^https:\/\/m5-zb\.amap\.com\/ws\/boss\/car\/order\/content_info\?/i then response.json.jq("def on_path($p; $t; f): if (try (getpath($p) | type == $t) catch false) then getpath($p) |= f else . end; (on_path([\"data\",\"lubanData\",\"kingToolSort\",\"dataList\"]; \"array\"; map(if type == \"object\" then (if ((try (.biz | type) catch null) == \"object\" and (.biz | has(\"kingToolIdList\"))) then (.biz.kingToolIdList |= (if type == \"array\" then map(select(IN(\"dache_toolbox_GDIntercity\",\"dache_toolbox_hitch\",\"dache_toolbox_chauffeur\",\"dache_toolbox_quality\",\"dache_toolbox_charterCar\"))) else . end)) else . end) else . end))) | on_path([\"data\",\"lubanData\",\"kingToolBox\",\"dataList\"]; \"array\"; map(select(if type == \"object\" then ((try (.biz | type) catch null) == \"object\" and (try (.biz.id | IN(\"dache_toolbox_GDIntercity\",\"dache_toolbox_hitch\",\"dache_toolbox_chauffeur\",\"dache_toolbox_quality\",\"dache_toolbox_charterCar\")) catch false)) else false end)))")
-
-response if ${url} ~= /^https:\/\/m5-zb\.amap\.com\/ws\/amap\/hitch\/passenger\/content_info\?/i then response.json.delete("data.lubanData.banner")
-
-request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/info_bff\/rankingCard\?/i then reject_dict(200)
-
-response if ${url} ~= /^https:\/\/center\.amap\.com\/ws\/amc\/server\/conv\/raise_list\?/i then response.json.jq("def on_path($p; $t; f): if (try (getpath($p) | type == $t) catch false) then getpath($p) |= f else . end; on_path([\"data\",\"dataList\"]; \"array\"; map(select(if type == \"object\" then (has(\"categoryId\") or ((.data | type) == \"object\" and .data.id == \"M_100007\")) else false end)))")
-
-response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\?/i then response.json.jq("(if (try (.data.shadingWords.data.regions.content | type == \"array\") catch false) then .data.shadingWords.data.regions.content |= map(select(IN(\"quickLink\",\"history\",\"searchFind\"))) else . end) | (if (try (.data.shadingWords.data.modules | type == \"object\") catch false) then .data.shadingWords.data.modules |= with_entries(select(.key == \"searchFind\")) else . end)")
-
-response if ${url} ~= /^https:\/\/info\.amap\.com\/ws\/shield\/search_business\/process\/middleLayer\/sug\?/i then response.json.jq(".tip_list |= map(select(.tip.task_tag == \"common_content_general\" or .tip.task_tag == \"sp\"))")
-
-response if ${url} ~= /^https:\/\/info\.amap\.com\/ws\/shield\/search\/poi\/detail\?/i then response.json.delete(["data.modules.combineReviews.data.write_comment.btnRightTag", "data.modules.combineReviews.data.write_comment.title"])
-
-response if ${url} ~= /^https:\/\/info\.amap\.com\/ws\/shield\/search\/poi\/detail\?/i then response.json.jq_file("https://kelee.one/Resource/JQLang/Amap/search_poi_detail.jq")
-
-response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/smartui\/near_recommend\?/i then response.json.delete("data.operation_activity")
-
-request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?/i then reject_dict(200)
-
-[MitM]
-hostname=m5.amap.com, ai.amap.com, m5-zb.amap.com, center.amap.com, sns.amap.com, info.amap.com
+         <script>
+    window._cf_translation = {};
+    
+    
+  </script> 
+        
+    </body>
+</html>

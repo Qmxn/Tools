@@ -1,87 +1,149 @@
-#!name=微博去广告
-# 引用链接: https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx
-#!desc=过滤微博广告及去除各部分推广模块
-#!openUrl=https://apps.apple.com/app/id350962117
-#!author=RuCu6[https://github.com/RuCu6], zmqcherish[https://github.com/zmqcherish]
-#!tag=去广告
-#!system=
-#!system_version=
-#!loon_version=3.5.1(998)
-#!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo.png
-#!date=2026-10-02 13:57:49
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+    <!--<![endif]-->
+    <head>
+        <title>Origin DNS error | kelee.one | Cloudflare</title>
+        <meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" /> <script>
+  (function(){if(document.addEventListener&&window.XMLHttpRequest&&JSON&&JSON.stringify){var e=function(a){var c=document.getElementById("error-feedback-survey"),d=document.getElementById("error-feedback-success"),b=new XMLHttpRequest;a={event:"feedback clicked",properties:{errorCode: 1016 },helpful:a,version: 1 };b.open("POST","https://sparrow.cloudflare.com/api/v1/event");b.setRequestHeader("Content-Type","application/json");b.setRequestHeader("Sparrow-Source-Key","c771f0e4b54944bebf4261d44bd79a1e");
+b.send(JSON.stringify(a));c.classList.add("feedback-hidden");d.classList.remove("feedback-hidden")};document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("error-feedback"),c=document.getElementById("feedback-button-yes"),d=document.getElementById("feedback-button-no");"classList"in a&&(a.classList.remove("feedback-hidden"),c.addEventListener("click",function(){e(!0)}),d.addEventListener("click",function(){e(!1)}))})}})();
+</script>
+        <script
+            defer
+            src="https://performance.radar.cloudflare.com/beacon.js"
+        ></script>
+    </head>
+    <body>
+        <div id="cf-wrapper">
+            <div
+                class="cf-alert cf-alert-error cf-cookie-error hidden"
+                id="cookie-alert"
+                data-translate="enable_cookies"
+            >
+                Please enable cookies.
+            </div>
+            <div id="cf-error-details" class="p-0">
+                <header
+                    class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-15 antialiased"
+                >
+                    <h1
+                        class="inline-block md:block mr-2 md:mb-2 font-light text-60 md:text-3xl text-black-dark leading-tight"
+                    >
+                        <span data-translate="error">Error</span>
+                        <span>1016</span>
+                    </h1>
+                    <span
+                        class="inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed"
+                        >Ray ID: a525cf2d18ac66f5 &bull;</span
+                    >
+                    <span
+                        class="inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed"
+                        >2026-10-29 23:02:41 UTC</span
+                    >
+                    <h2
+                        class="text-gray-600 leading-1.3 text-3xl lg:text-2xl font-light"
+                    >
+                        Origin DNS error
+                    </h2>
+                </header>
+                
+                
+                <section class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+                    <div id="what-happened-section" class="w-1/2 md:w-full">
+                        <h2
+                            class="text-3xl leading-tight font-normal mb-4 text-black-dark antialiased"
+                            data-translate="what_happened"
+                        >
+                            What happened?
+                        </h2>
+                        
+                            <p>You've requested a page on a website (kelee.one) that is on the <a href="https://www.cloudflare.com/5xx-error-landing/" target="_blank">Cloudflare</a> network. Cloudflare is currently unable to resolve your requested domain (kelee.one).</p>
+                        
+                        
+                        <p>
+                            Please see
+                            <a
+                                rel="noopener noreferrer"
+                                href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1016/"
+                                target="_blank"
+                                >https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1016/</a
+                            >
+                            for more details.
+                        </p>
+                        
+                    </div>
 
-[Rule]
-DOMAIN-SUFFIX, uve.weibo.com, DIRECT
+                    
+                    <div
+                        id="resolution-copy-section"
+                        class="w-1/2 mt-6 text-15 leading-normal"
+                    >
+                        <h2
+                            class="text-3xl leading-tight font-normal mb-4 text-black-dark antialiased"
+                            data-translate="what_can_i_do"
+                        >
+                            What can I do?
+                        </h2>
+                        <p><strong>If you are a visitor of this website:</strong><br />Please try again in a few minutes.</p><p><strong>If you are the owner of this website:</strong><br />Check your DNS settings. If you are using a CNAME origin record, make sure it is valid and resolvable. <a rel="noopener noreferrer" href="https://support.cloudflare.com/hc/en-us/articles/234979888-Error-1016-Origin-DNS-error">Additional troubleshooting information here.</a></p>
+                    </div>
+                    
+                </section>
+                
 
-DOMAIN, huodong.weibo.cn, REJECT
-DOMAIN-SUFFIX, biz.weibo.com, REJECT
+                <div class="feedback-hidden py-8 text-center" id="error-feedback">
+    <div id="error-feedback-survey" class="footer-line-wrapper">
+        Was this page helpful?
+        <button
+            class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded"
+            id="feedback-button-yes"
+            type="button"
+        >
+            Yes
+        </button>
+        <button
+            class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded"
+            id="feedback-button-no"
+            type="button"
+        >
+            No
+        </button>
+    </div>
+    <div class="feedback-success feedback-hidden" id="error-feedback-success">
+        Thank you for your feedback!
+    </div>
+</div> <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">a525cf2d18ac66f5</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">40.124.29.227</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+            </div>
+            <!-- /#cf-error-details -->
+        </div>
+        <!-- /#cf-wrapper -->
 
-[Rewrite]
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/(?:ug\/checkin\/list|push\/daily|push\/info)/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\?/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/photo\/info\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_positive|push_info)/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/!\/wbox\/\w+\/(?:home_bottom_modal|interest_category)/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/search\/(?:container_discover|finder_nav_polling)\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\?/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/!\/(?:search\/finder_nav_polling|sug\/list\/finderchange|was\/finder\/searchbarchange)\?/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\?/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php)/i then reject_dict(200)
-
-request if ${url} ~= /^https:\/\/card\.weibo\.com\/article\/m\/aj\/(?:reward|uvead)/i then reject_dict(200)
-request if ${url} ~= /^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(?:reward|uvead)/i then reject_dict(200)
-
-[Script]
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/(?:checkin\/show|client\/publisher_list|push\/active)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除首页推广", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除首页顶部标签", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/(?:cardlist|page)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除信息流广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除评论区广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除个人微博详情页广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/friendships\/(?:create|destroy)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除关注、取消关注弹窗", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab|userinfo)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除个人主页广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/shproxy\/chaohua\/discovery\/searchactive\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除超话搜索页广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:comments_expand_child|container_detail_comment)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除评论区广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_detail\?|container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除信息流广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:extend|show)\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除微博详情页广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/video\/(?:full_screen_stream|tiny_stream_mid_detail|tiny_stream_video_list)\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除视频流广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除超话顶部标签", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除消息页列表广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除消息页提醒", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/search\/(?:container_timeline|finder)\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除热门微博信息流广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/api\.weibo\.cn\/2\/searchall\?/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除发现页搜索结果广告", requires_body=true
-
-response if ${url} ~= /^https:\/\/bootpreload\.uve\.weibo\.com\/v[12]\/ad\/preload/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除开屏广告 preload", requires_body=true
-
-response if ${url} ~= /^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除开屏广告 sdkad", requires_body=true
-
-response if ${url} ~= /^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wbpullad\.lua)/i then script("https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js") with tag="移除开屏广告 wbapplua", requires_body=true
-
-[MitM]
-hostname=*.weibo.cn, *.weibo.com, weibo.com
+         <script>
+    window._cf_translation = {};
+    
+    
+  </script> 
+        
+    </body>
+</html>
