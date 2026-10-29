@@ -1,12 +1,3 @@
-#!name=知识星球去水印
-#!desc=移除内容的水印编号
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/UnnooQuan.png
-#!openUrl=https://apps.apple.com/app/id1039749242
-#!loon_version=3.5.1(998)
-#!homepage=https://hub.kelee.one
-#!date=2026-10-02 13:57:49
-
-[MITM]
-hostname = %APPEND% api.zsxq.com
+#!name=https%3A%2F%2Fraw
+#!desc=https%3A%2F%2Fraw
 

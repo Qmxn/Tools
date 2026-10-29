@@ -1,13 +1,3 @@
-#!name=TestFlight地区解锁
-#!desc=解除TestFlight的区域限制，支持tvOS。
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
-#!openUrl=https://apps.apple.com/app/id899247664
-#!tag=功能增强
-#!loon_version=3.5.1(998)
-#!homepage=https://hub.kelee.one
-#!date=2026-10-02 13:57:49
-
-[MITM]
-hostname = %APPEND% testflight.apple.com
+#!name=https%3A%2F%2Fraw
+#!desc=https%3A%2F%2Fraw
 

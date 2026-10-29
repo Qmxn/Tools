@@ -1,14 +1,3 @@
-#!name=Sub-Store
-#!desc=高级订阅管理工具，定时任务默认为每天23点55分，可在插件设置中自定义。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
-#!author=Peng-YM[https://github.com/Peng-YM]
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Sub-Store.png
-#!openUrl=https://sub.store
-#!tag=订阅管理
-#!loon_version=3.5.1(998)
-#!homepage=https://hub.kelee.one
-#!date=2026-10-02 13:57:49
-#!arguments=cron:"55 23 * * *"
-
-[MITM]
-hostname = %APPEND% sub.store
+#!name=https%3A%2F%2Fraw
+#!desc=https%3A%2F%2Fraw
 
