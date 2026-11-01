@@ -1,0 +1,40 @@
+name: Clear Commits
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 19 1 * *'
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  ClearCommits:
+    runs-on: ubuntu-latest
+    env:
+      TZ: "Asia/Shanghai"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          BRANCH_NAME=${{ github.ref_name }}
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          git checkout --orphan temp_clean_branch
+          git add -A
+          git commit -m "Cleanup history on $(date +'%Y-%m-%d %H:%M:%S')"
+          git push -f origin temp_clean_branch:$BRANCH_NAME          
+          echo "Successfully cleared history for branch: $BRANCH_NAME"
+
+      - name: Cleanup Workflow Runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 1

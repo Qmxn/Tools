@@ -1,0 +1,79 @@
+name: Sync Module
+
+on:
+  workflow_dispatch: # 支持手动触发
+  schedule:
+    - cron: '15 19 * * *' # 每日 UTC 00:00 (北京时间 08:00) 自动同步
+
+permissions:
+  contents: write # 赋予 Action 提交修改权限
+
+jobs:
+  sync-module:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出当前仓库
+      - name: Checkout target repository
+        uses: actions/checkout@v7
+
+      # 2. 从上游仓库稀疏拉取指定文件夹
+      - name: Fetch target directory from upstream
+        run: |
+          mkdir -p temp_upstream
+          cd temp_upstream
+          git init
+          git remote add origin https://github.com/fmz200/wool_scripts.git
+          git config core.sparseCheckout true
+          echo "Surge/module/split" >> .git/info/sparse-checkout
+          git pull origin main --depth=1
+          cd ..
+
+      # 3. 处理文件：递归提取并保存至 Module/ 目录下
+      - name: Process and rename files
+        run: |
+          # 设定目标文件夹名称为 Module
+          DEST_DIR="Module"
+          SRC_DIR="temp_upstream/Surge/module/split"
+
+          # 确保 Module/ 目录存在，并清理旧文件
+          mkdir -p "$DEST_DIR"
+          rm -f "$DEST_DIR"/*.module
+
+          if [ -d "$SRC_DIR" ]; then
+            # 递归查找子目录中的 .sgmodule 并提取重命名到 Module/ 根路径
+            find "$SRC_DIR" -type f -name "*.sgmodule" | while read -r file; do
+              filename=$(basename "$file" .sgmodule)
+              cp "$file" "$DEST_DIR/$filename.module"
+              echo "Renamed: $file -> $DEST_DIR/$filename.module"
+            done
+          else
+            echo "Error: Source directory $SRC_DIR not found."
+            exit 1
+          fi
+
+          # 清理临时文件夹
+          rm -rf temp_upstream
+
+      # 4. 检查差异并提交
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add .
+          if git diff --staged --quiet; then
+            echo "No updates detected. Skipping commit."
+          else
+            git commit -m "同步并转换 $(date +'%Y-%m-%d %H:%M:%S')"
+            git push
+          fi
+          
+      # 5. 清理旧 workflow
+      - name: 清理旧 workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 2
+
