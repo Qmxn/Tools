@@ -3,10 +3,13 @@
 #!author=xream[https://github.com/xream]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Reddit.png
 #!openUrl=https://apps.apple.com/app/id1064216828
-#!tag=去广告
+#!category=去广告
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+[Body Rewrite]
+http-response-jq (?i)^https?:\/\/gql(-fed)?\.reddit\.com '[Rewrite] response if ${url} ~= /^https?:\/\/gql(-fed)?\.reddit\.com/i then response.json.jq_file("https://kelee.one/Resource/JQLang/Reddit/Reddit_remove_ads.jq")  [MitM] hostname=gql.reddit.com, gql-fed.reddit.com'
 
 [MITM]
 hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com
